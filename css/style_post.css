@@ -1,0 +1,53 @@
+.post {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin-top: 20px;
+  line-height: 1.8; /* 增加行高，提升阅读舒适度 */
+}
+
+.post h1, .post h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: salmon;
+  text-decoration: none !important;
+}
+
+.post h2 a{
+  color: rgb(185, 46, 31);
+  text-decoration: none !important;
+}
+
+.post h1:hover, .post h2:hover {
+  font-size: 30px;
+  color: #f16043;
+  text-decoration: none !important;
+}
+
+.post p {
+  font-style: italic;
+  color: #666;
+  text-align: center; 
+  margin-bottom: 10px;
+}
+
+.post .content {
+  font-size: 18px; /* 提高文章内容的字体大小 */
+  line-height: 2; /* 增加文章内容的行高 */
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.post .excerpt {
+  color: #333;
+  line-height: 1.6;
+  text-align: center; 
+}

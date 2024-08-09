@@ -24,8 +24,8 @@ footer p {
 
 
 
+/* Home intro 容器 */
 .home-intro {
-  background: url('<%- config.url %>/images/1.png') no-repeat center center;
   padding: 50px 20px;
   border-radius: 10px;
   text-align: center;
@@ -33,11 +33,18 @@ footer p {
   position: relative;
   overflow: hidden;
   color: #ffffff;
+  /* 背景图片移除，如果希望只显示插入的图片，可以去掉这行 */
+  /* background: url('<%- config.url %>/images/1.png') no-repeat center center; */
+  /* background-size: cover; */
+  animation: gradientShift 15s ease infinite;
 }
 
-/* 添加动画样式 */
-.home-intro {
-  animation: gradientShift 15s ease infinite;
+/* 主页图片样式 */
+.home-image {
+  max-width: 100%; /* 让图片自适应宽度 */
+  height: auto; /* 保持图片比例 */
+  border-radius: 10px; /* 使图片有圆角 */
+  margin-bottom: 20px; /* 图片与标题之间的间距 */
 }
 
 .home-intro h2 {

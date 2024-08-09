@@ -2,38 +2,65 @@
   font-family: 'Arial', sans-serif;
   color: #333;
   margin-top: 20px;
-  line-height: 1.8; /* 增加行高，提升阅读舒适度 */
+  padding: 20px; /* 增加內邊距 */
+  border-radius: 8px; /* 圓角邊框 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 增加陰影 */
+  background-color: #f9f9f9; /* 背景顏色 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 平滑過渡效果 */
 }
 
-.post h1, .post h2 {
-  font-size: 28px;
+.post:hover {
+  transform: translateY(-5px); /* 鼠標懸停時向上移動 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 增加陰影 */
+}
+
+.post h2, .post h1  {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
   text-align: center;
-  margin-bottom: 20px;
+}
+
+.post h2 a {
   color: salmon;
-  text-decoration: none !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.post h2 a{
-  color: rgb(185, 46, 31);
-  text-decoration: none !important;
-}
-
-.post h1:hover, .post h2:hover {
-  font-size: 30px;
+.post h2 a:hover, .post h1:hover {
   color: #f16043;
-  text-decoration: none !important;
 }
 
 .post p {
-  font-style: italic;
-  color: #666;
-  text-align: center; 
-  margin-bottom: 10px;
+  text-align: center;
 }
 
-.post .content {
-  font-size: 18px; /* 提高文章内容的字体大小 */
-  line-height: 2; /* 增加文章内容的行高 */
+.post-date {
+  font-style: italic;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.post .excerpt {
+  color: #555;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.read-more {
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  color: #4fc3f7;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.read-more:hover {
+  text-decoration: underline;
 }
 
 .content {
@@ -44,10 +71,6 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin-top: 20px;
-}
-
-.post .excerpt {
-  color: #333;
-  line-height: 1.6;
-  text-align: center; 
+  font-size: 18px; /* 提高文章内容的字体大小 */
+  line-height: 2; /* 增加文章内容的行高 */
 }

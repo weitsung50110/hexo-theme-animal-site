@@ -52,3 +52,75 @@ main ul li span.date {
   font-style: italic; /* 日期斜體 */
   font-size: 0.9em; /* 日期字體大小 */
 }
+
+/* 標籤區域樣式 */
+#tags {
+  margin-top: 20px; /* 上方間距 */
+  padding: 10px; /* 內邊距 */
+  background: #e3f2fd; /* 背景顏色 */
+  border-radius: 4px; /* 圓角 */
+}
+
+#tags h3 {
+  font-size: 1.5em; /* 標籤標題字體大小 */
+  color: #333; /* 標籤標題顏色 */
+  margin-bottom: 10px; /* 標籤標題下方間距 */
+}
+
+#tags ul {
+  list-style: none; /* 去掉列表前的符號 */
+  padding: 0; /* 去掉內邊距 */
+  margin: 0; /* 去掉外邊距 */
+}
+
+#tags ul li {
+  display: inline-block; /* 行內顯示 */
+  margin-right: 10px; /* 右側間距 */
+}
+
+#tags ul li a {
+  color: #4fc3f7; /* 標籤顏色 */
+  text-decoration: none; /* 去掉下劃線 */
+  font-size: 1em; /* 標籤字體大小 */
+}
+
+#tags ul li a:hover {
+  text-decoration: underline; /* 懸停時顯示下劃線 */
+  color: #003c71; /* 懸停顏色 */
+}
+
+/* 分類區域樣式 */
+#category {
+  margin-top: 20px; /* 上方間距 */
+  padding: 10px; /* 內邊距 */
+  background: #e8f5e9; /* 背景顏色 */
+  border-radius: 4px; /* 圓角 */
+}
+
+#category h3 {
+  font-size: 1.5em; /* 分類標題字體大小 */
+  color: #333; /* 分類標題顏色 */
+  margin-bottom: 10px; /* 分類標題下方間距 */
+}
+
+#category ul {
+  list-style: none; /* 去掉列表前的符號 */
+  padding: 0; /* 去掉內邊距 */
+  margin: 0; /* 去掉外邊距 */
+}
+
+#category ul li {
+  display: inline-block; /* 行內顯示 */
+  margin-right: 10px; /* 右側間距 */
+}
+
+#category ul li a {
+  color: #66bb6a; /* 分類顏色 */
+  text-decoration: none; /* 去掉下劃線 */
+  font-size: 1em; /* 分類字體大小 */
+}
+
+#category ul li a:hover {
+  text-decoration: underline; /* 懸停時顯示下劃線 */
+  color: #388e3c; /* 懸停顏色 */
+}

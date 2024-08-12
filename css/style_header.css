@@ -65,7 +65,7 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-.menu-button, #toggleButton {
+.menu-button {
   background: #4fc3f7;
   color: #fff;
   border: none;
@@ -73,4 +73,26 @@ nav ul li a:hover {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1em;
+}
+
+/* 下拉菜單的樣式 */
+.nav-menu a {
+  display: block;
+  padding: 10px 15px; /* 內邊距 */
+  color: #333; /* 連結顏色 */
+  text-decoration: none; /* 去掉下劃線 */
+  border: 1px solid #ddd; /* 邊框顏色 */
+  border-radius: 4px; /* 圓角 */
+  background: #fff; /* 背景顏色 */
+  margin-bottom: 5px; /* 下面間距 */
+}
+
+.nav-menu a:hover {
+  background: #f8f9fa; /* 懸停背景顏色 */
+  color: #007bff; /* 懸停顏色 */
+}
+
+/* 添加動畫效果 */
+.nav-menu {
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }

@@ -1,4 +1,5 @@
 
+
 .social-sidebar {
   position: fixed;
   top: 20%;
@@ -31,4 +32,25 @@
 
 .social-sidebar a:hover {
   color: #ccc;
+}
+
+/* 固定在網頁左邊中間的按鈕 */
+#toggleButton {
+  position: fixed; /* 固定定位 */
+  left: 2px; /* 距離左邊 20 像素，根據需求調整 */
+  top: 50%; /* 垂直中心對齊 */
+  transform: translateY(-50%); /* 垂直居中對齊 */
+  background-color: #007bff; /* 按鈕背景顏色 */
+  color: #fff; /* 按鈕文字顏色 */
+  border: none; /* 去掉邊框 */
+  padding: 10px 20px; /* 內邊距 */
+  border-radius: 4px; /* 圓角 */
+  cursor: pointer; /* 滑鼠懸停時顯示手形 */
+  font-size: 1em; /* 字體大小 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影 */
+  z-index: 999;
+}
+
+#toggleButton:hover {
+  background-color: #0056b3; /* 懸停時的背景顏色 */
 }

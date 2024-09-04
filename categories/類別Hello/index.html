@@ -3,34 +3,43 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Weiberson Chang Template</title>
+<title>Hexo</title>
 <!-- <link rel="stylesheet" href="/css/style.css"> -->
-<link rel="stylesheet" href="/hexo_theme1/css/style.css">
-<link rel="stylesheet" href="/hexo_theme1/css/style_post.css">
-<link rel="stylesheet" href="/hexo_theme1/css/style_header.css">
-<link rel="stylesheet" href="/hexo_theme1/css/style_sidebar.css">
-<link rel="stylesheet" href="/hexo_theme1/css/style_archives.css">
+<!-- <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style_post.css">
+<link rel="stylesheet" href="/css/style_header.css">
+<link rel="stylesheet" href="/css/style_sidebar.css">
+<link rel="stylesheet" href="/css/style_archives.css">
+<link rel="stylesheet" href="/css/style_index_post.css"> -->
+
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style_post.css">
+<link rel="stylesheet" href="/css/style_header.css">
+<link rel="stylesheet" href="/css/style_sidebar.css">
+<link rel="stylesheet" href="/css/style_archives.css">
+<link rel="stylesheet" href="/css/style_index_post.css">
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body>
   <header>
   <div class="header-content">
-    <img src="https://weitsung50110.github.io/hexo_theme1/images/2.png" alt="Logo">
-    <h1><a href="https://weitsung50110.github.io/hexo_theme1">Weiberson Chang Template</a></h1>
+    <img src="http://localhost:4000/images/2.png" alt="Logo">
+    <h1><a href="http://localhost:4000">Weiberson Chang Template</a></h1>
   </div>
   <nav>
     <ul>
-      <li><a href="https://weitsung50110.github.io/hexo_theme1/">Home</a></li>
-      <li><a href="https://weitsung50110.github.io/hexo_theme1/about">About</a></li>
-      <li><a href="https://weitsung50110.github.io/hexo_theme1/archives">Archives</a></li>
-      <li><button class="menu-button">Follow me<i class="fas fa-bars"></i></button></li>
-      
-      <!-- 下拉菜單 -->
-      <div class="nav-menu">
-        <a target="_blank" rel="noopener" href="https://github.com/weitsung50110">GitHub</a>
-        <a target="_blank" rel="noopener" href="https://medium.com/@weiberson">Medium</a>
-      </div>
+      <li><a href="http://localhost:4000/">Home</a></li>
+      <li><a href="http://localhost:4000/about">About</a></li>
+      <li><a href="http://localhost:4000/archives">Archives</a></li>
+      <li class="dropdown">
+        <button class="menu-button">Follow me<i class="fas fa-bars"></i></button>
+        <!-- 下拉菜單 -->
+        <div class="nav-menu">
+          <a target="_blank" rel="noopener" href="https://github.com/weitsung50110">GitHub</a>
+          <a target="_blank" rel="noopener" href="https://medium.com/@weiberson">Medium</a>
+        </div>
+      </li>
     </ul>
-  </nav>
+  </nav>  
   <button id="toggleButton">三<i class="fas fa-share-alt"></i></button>
 </header>
   <div id="container">
@@ -43,7 +52,7 @@
         
           <li>
             
-              <a href="/hexo_theme1/1970/01/01/hello-world/">
+              <a href="/1970/01/01/hello-world/">
                 Hello World
               </a>
             
@@ -69,9 +78,9 @@
       <h3>Categories</h3>
       <ul>
         
-          <li><a href="https://weitsung50110.github.io/hexo_theme1/categories/%E9%A1%9E%E5%88%A5First/">類別First</a></li>
+          <li><a href="http://localhost:4000/categories/%E9%A1%9E%E5%88%A5First/">類別First</a></li>
         
-          <li><a href="https://weitsung50110.github.io/hexo_theme1/categories/%E9%A1%9E%E5%88%A5Hello/">類別Hello</a></li>
+          <li><a href="http://localhost:4000/categories/%E9%A1%9E%E5%88%A5Hello/">類別Hello</a></li>
         
       </ul>
     </div>
@@ -83,9 +92,11 @@
     <h3>Tags</h3>
     <ul>
       
-        <li><a href="https://weitsung50110.github.io/hexo_theme1/tags/%E6%A8%99%E7%B1%A41/">標籤1</a></li>
+        <li><a href="http://localhost:4000/tags/%E6%A8%99%E7%B1%A41/">標籤1</a></li>
       
-        <li><a href="https://weitsung50110.github.io/hexo_theme1/tags/Hello/">Hello</a></li>
+        <li><a href="http://localhost:4000/tags/archives/">archives</a></li>
+      
+        <li><a href="http://localhost:4000/tags/Hello/">Hello</a></li>
       
     </ul>
   </div>
@@ -95,7 +106,8 @@
   <footer>
   <p>&copy; 2024 Weiberson Chang (weitsung50110). All rights reserved.</p>
   <!-- <script src="/js/main.js"></script> -->
-  <script src="/hexo_theme1/js/script.js"></script>
+  <!-- <script src="/js/script.js"></script> -->
+  <script src="/js/script.js"></script>
 </footer>
 
 </body>

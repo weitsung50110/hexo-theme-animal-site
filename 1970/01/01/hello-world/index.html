@@ -26,22 +26,29 @@
     <img src="https://weitsung50110.github.io/hexo_theme1/images/2.png" alt="Logo">
     <h1><a href="https://weitsung50110.github.io/hexo_theme1">Weiberson Chang Template</a></h1>
   </div>
-  <nav>
-    <ul>
-      <li><a href="https://weitsung50110.github.io/hexo_theme1/">Home</a></li>
-      <li><a href="https://weitsung50110.github.io/hexo_theme1/about">About</a></li>
-      <li><a href="https://weitsung50110.github.io/hexo_theme1/archives">Archives</a></li>
-      <li class="dropdown">
-        <button class="menu-button">Follow me<i class="fas fa-bars"></i></button>
-        <!-- 下拉菜單 -->
-        <div class="nav-menu">
-          <a target="_blank" rel="noopener" href="https://github.com/weitsung50110">GitHub</a>
-          <a target="_blank" rel="noopener" href="https://medium.com/@weiberson">Medium</a>
-        </div>
-      </li>
-    </ul>
-  </nav>  
-  <button id="toggleButton">三<i class="fas fa-share-alt"></i></button>
+
+  <!-- 在 header 中添加漢堡選單 -->
+<button class="menu-toggle" aria-label="Toggle Navigation">
+  ☰
+</button>
+
+<!-- 在 nav 中包裹選單 -->
+<nav class="mobile-nav">
+  <ul>
+    <li><a href="https://weitsung50110.github.io/hexo_theme1/">Home</a></li>
+    <li><a href="https://weitsung50110.github.io/hexo_theme1/about">About</a></li>
+    <li><a href="https://weitsung50110.github.io/hexo_theme1/archives">Archives</a></li>
+    <li><button id="toggleButton2">Tags&Categories</button></li>
+    <li class="dropdown">
+      <button class="menu-button">Follow me</button>
+      <div class="nav-menu">
+        <a target="_blank" rel="noopener" href="https://github.com/weitsung50110">GitHub</a>
+        <a target="_blank" rel="noopener" href="https://medium.com/@weiberson">Medium</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+  <button id="toggleButton">Tags&<br/>Categories</button>
 </header>
   <div id="container">
     
@@ -87,7 +94,7 @@
                       window.getSelection().addRange(range);
                       document.execCommand('copy');
                       window.getSelection().removeAllRanges();
-                      alert('Code copied to clipboard!');
+                      // alert('Code copied to clipboard!');
                   });
               });
           });
@@ -125,9 +132,9 @@
       
         <li><a href="https://weitsung50110.github.io/hexo_theme1/tags/%E6%A8%99%E7%B1%A41/">標籤1</a></li>
       
-        <li><a href="https://weitsung50110.github.io/hexo_theme1/tags/archives/">archives</a></li>
-      
         <li><a href="https://weitsung50110.github.io/hexo_theme1/tags/Hello/">Hello</a></li>
+      
+        <li><a href="https://weitsung50110.github.io/hexo_theme1/tags/%E6%95%99%E5%AD%B8/">教學</a></li>
       
     </ul>
   </div>
@@ -139,6 +146,8 @@
   <!-- <script src="/js/main.js"></script> -->
   <!-- <script src="/hexo_theme1/js/script.js"></script> -->
   <script src="/hexo_theme1/js/script.js"></script>
+  <script src="/hexo_theme1/js/side_bar_script.js"></script>
+  
 </footer>
 
 </body>

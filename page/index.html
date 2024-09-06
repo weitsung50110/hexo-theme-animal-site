@@ -61,26 +61,40 @@
 
   <div id="container">
     
-    <div id="tags">
-    <h1></h1>
-    
-    
-      <ul class="post-list">
-        
-          <li>
-            
-              <a href="/2024/08/09/archives/">
-                關於archives的設定
-              </a>
-            
-            <time datetime="2024-08-09T07:22:11.000Z">
-              2024-08-09
-            </time>
-          </li>
-        
-      </ul>
-    
+    <article class="post">
+  <h1>Page</h1>
+  <p class="post-date">日期：Thu Dec 26 2013 22:52:56 GMT+0000</p>
+  <p class="post-author">作者：</p>
+  
+  <div class="content">
+      <p>This is a page test.</p>
+
+
+      <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              const codeBlocks = document.querySelectorAll('pre code');
+              codeBlocks.forEach(block => {
+                  const button = document.createElement('button');
+                  button.textContent = 'Copy';
+                  button.className = 'copy-button';
+                  block.parentElement.style.position = 'relative';
+                  block.parentElement.appendChild(button);
+      
+                  button.addEventListener('click', () => {
+                      const range = document.createRange();
+                      range.selectNode(block);
+                      window.getSelection().removeAllRanges();
+                      window.getSelection().addRange(range);
+                      document.execCommand('copy');
+                      window.getSelection().removeAllRanges();
+                      // alert('Code copied to clipboard!');
+                  });
+              });
+          });
+      </script>
   </div>
+</article>
+
     
   </div>
   

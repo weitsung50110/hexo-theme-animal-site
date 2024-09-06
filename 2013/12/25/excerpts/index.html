@@ -61,26 +61,48 @@
 
   <div id="container">
     
-    <div id="tags">
-    <h1></h1>
-    
-    
-      <ul class="post-list">
-        
-          <li>
-            
-              <a href="/2024/08/09/archives/">
-                關於archives的設定
-              </a>
-            
-            <time datetime="2024-08-09T07:22:11.000Z">
-              2024-08-09
-            </time>
-          </li>
-        
-      </ul>
-    
+    <article class="post">
+  <h1>Excerpts</h1>
+  <p class="post-date">日期：Wed Dec 25 2013 00:23:23 GMT+0000</p>
+  <p class="post-author">作者：</p>
+  
+      <div class="excerpt">
+          <p>&lt;p&gt;The following contents should be invisible in home&amp;#x2F;archive page.&lt;/p&gt;</p>
+      </div>
+  
+  <div class="content">
+      <p>The following contents should be invisible in home&#x2F;archive page.</p>
+<span id="more"></span>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget urna vitae velit eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Aliquam eleifend dolor vitae libero pharetra adipiscing. Etiam adipiscing dolor a quam tempor, eu convallis nulla varius. Aliquam sollicitudin risus a porta aliquam. Ut nec velit dolor. Proin eget leo lobortis, aliquam est sed, mollis mauris. Fusce vitae leo pretium massa accumsan condimentum. Fusce malesuada gravida lectus vel vulputate. Donec bibendum porta nibh ut aliquam.</p>
+<p>Sed lorem felis, congue non fringilla eu, aliquam eu eros. Curabitur orci libero, mollis sed semper vitae, adipiscing in lectus. Aenean non egestas odio. Donec sollicitudin nisi quis lorem gravida, in pharetra mauris fringilla. Duis sit amet faucibus dolor, id aliquam neque. In egestas, odio gravida tempor dictum, mauris felis faucibus purus, sit amet commodo lacus diam vitae est. Ut ut quam eget massa semper sodales. Aenean non ipsum cursus, blandit lectus in, ornare odio. Curabitur ultrices porttitor vulputate.</p>
+
+
+      <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              const codeBlocks = document.querySelectorAll('pre code');
+              codeBlocks.forEach(block => {
+                  const button = document.createElement('button');
+                  button.textContent = 'Copy';
+                  button.className = 'copy-button';
+                  block.parentElement.style.position = 'relative';
+                  block.parentElement.appendChild(button);
+      
+                  button.addEventListener('click', () => {
+                      const range = document.createRange();
+                      range.selectNode(block);
+                      window.getSelection().removeAllRanges();
+                      window.getSelection().addRange(range);
+                      document.execCommand('copy');
+                      window.getSelection().removeAllRanges();
+                      // alert('Code copied to clipboard!');
+                  });
+              });
+          });
+      </script>
   </div>
+</article>
+
     
   </div>
   

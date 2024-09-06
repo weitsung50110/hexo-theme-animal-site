@@ -61,26 +61,48 @@
 
   <div id="container">
     
-    <div id="tags">
-    <h1></h1>
-    
-    
-      <ul class="post-list">
-        
-          <li>
-            
-              <a href="/2024/08/09/archives/">
-                關於archives的設定
-              </a>
-            
-            <time datetime="2024-08-09T07:22:11.000Z">
-              2024-08-09
-            </time>
-          </li>
-        
-      </ul>
-    
+    <article class="post">
+  <h1>Gallery Post</h1>
+  <p class="post-date">日期：Wed Dec 25 2013 00:16:18 GMT+0000</p>
+  <p class="post-author">作者：</p>
+  
+  <div class="content">
+      <p>This post contains 4 photos:</p>
+<ul>
+<li>Widescreen wallpaper</li>
+<li>Portrait photo</li>
+<li>Dual widescreen wallpaper</li>
+<li>Small photo</li>
+</ul>
+<p>All photos should be displayed properly.</p>
+<p><em>From <a target="_blank" rel="noopener" href="http://wallbase.cc/">Wallbase.cc</a></em></p>
+
+
+      <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              const codeBlocks = document.querySelectorAll('pre code');
+              codeBlocks.forEach(block => {
+                  const button = document.createElement('button');
+                  button.textContent = 'Copy';
+                  button.className = 'copy-button';
+                  block.parentElement.style.position = 'relative';
+                  block.parentElement.appendChild(button);
+      
+                  button.addEventListener('click', () => {
+                      const range = document.createRange();
+                      range.selectNode(block);
+                      window.getSelection().removeAllRanges();
+                      window.getSelection().addRange(range);
+                      document.execCommand('copy');
+                      window.getSelection().removeAllRanges();
+                      // alert('Code copied to clipboard!');
+                  });
+              });
+          });
+      </script>
   </div>
+</article>
+
     
   </div>
   

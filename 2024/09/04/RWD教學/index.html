@@ -69,45 +69,122 @@
   <div id="container">
     <div id="search-results"></div>
     <article class="post">
-  <h1>關於archives的設定</h1>
-  <p class="post-date">Date：Fri Aug 09 2024 07:22:11 GMT+0000</p>
+  <h1>RWD教學</h1>
+  <p class="post-date">Date：Wed Sep 04 2024 08:03:54 GMT+0000</p>
   <p class="post-author">Author：Weiberson</p>
   
       <div class="excerpt">
-          <p>有bug的時候可以看看，因為我記憶力不好:&#34;)</p>
+          <p>如何把很多.css結合在一起，並且可以達到RWD模式。</p>
       </div>
   
   <div class="content">
-      <h3 id="錯誤"><a href="#錯誤" class="headerlink" title="錯誤"></a>錯誤</h3><p>這邊很妙 當title設為archives的時候</p>
-<p>儘管layout設定archives，但總會連到index.ejs上面</p>
-<p>應該是&#x2F;archives路徑已經預設被指到index.ejs了</p>
-<p>所以歸檔的部分，我決定換名字 改為archives_N</p>
-<h3 id="正確"><a href="#正確" class="headerlink" title="正確"></a>正確</h3><p>命名的時候輸入archive.ejs會自動導入archive.ejs裡面</p>
-<p>如果title設為archives.ejs的時候，當然會沒有反應</p>
-<p>導致變成連到index.ejs上面</p>
-<h3 id="tag-ejs"><a href="#tag-ejs" class="headerlink" title="tag.ejs"></a>tag.ejs</h3><p>tag.ejs才抓的到<br>如果打tags.ejs會抓不到</p>
-<h3 id="當本地-css看的到改變-上傳到github-page卻看不到改變"><a href="#當本地-css看的到改變-上傳到github-page卻看不到改變" class="headerlink" title="當本地.css看的到改變 上傳到github page卻看不到改變?!"></a>當本地.css看的到改變 上傳到github page卻看不到改變?!</h3><p>進去&#x2F;public裡面的.css查看 更改的語法是否還在<br>當<code>huxo g -d</code>後 有些css語法會自己消失&gt;&lt;”</p>
-<h3 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h3><p><strong><code>url_for</code> 函數的用途</strong>： </p>
-<ul>
-<li>用於生成靜態資源的 URL（如 CSS、JavaScript、圖片等）。 </li>
-<li>用於生成網站文章和頁面的 URL。 </li>
-<li>url_for 會生成相對於網站根目錄的 URL。例如，url_for(‘css&#x2F;style.css’) 會生成 &#x2F;css&#x2F;style.css。這樣的 URL 可以直接用於靜態資源，如 CSS、JavaScript 和圖片。</li>
-</ul>
-<p><strong>如何使用</strong>： </p>
-<ul>
-<li><p>在模板中使用 <code>&lt;%- url_for(&#39;path&#39;) %&gt;</code> 來生成正確的 URL</p>
-<pre><code>  &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;%- url_for(&#39;css/style.css&#39;) %&gt;&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;%- url_for(&#39;css/style_post.css&#39;) %&gt;&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;%- url_for(&#39;css/style_header.css&#39;) %&gt;&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;%- url_for(&#39;css/style_sidebar.css&#39;) %&gt;&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;%- url_for(&#39;css/style_archives.css&#39;) %&gt;&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;%- url_for(&#39;css/style_index_post.css&#39;) %&gt;&quot;&gt;
+      <p>Q:<br>我現在有6個.css檔案 依照不同.ejs進行分類<br>我現在想要做成RWD響應式網站 請問怎麼辦?<br>A:</p>
+<h3 id="1-合併所有-CSS-文件"><a href="#1-合併所有-CSS-文件" class="headerlink" title="1. 合併所有 CSS 文件"></a>1. 合併所有 CSS 文件</h3><p>首先，將所有 CSS 文件的內容合併到一個主 CSS 文件中，例如 <code>main.css</code>。這樣可以集中管理樣式，並在一個地方進行響應式設計的調整。</p>
+<pre><code>    /* main.css */
+    /* 引入其他 CSS 文件 */
+    @import url(&#39;style.css&#39;);
+    @import url(&#39;style_archives.css&#39;);
+    @import url(&#39;style_header.css&#39;);
+    @import url(&#39;style_index_post.css&#39;);
+    @import url(&#39;style_post.css&#39;);
+    @import url(&#39;style_sidebar.css&#39;);
+
+    /* 響應式設計 */
+    @media (max-width: 768px) &#123;
+        .home-intro h2 &#123;
+        font-size: 1.5em;
+        &#125;
+    
+        header &#123;
+        flex-direction: column;
+        &#125;
+    
+        .header-content &#123;
+        flex-direction: column;
+        &#125;
+    
+        nav &#123;
+        flex-direction: column;
+        align-items: flex-start;
+        &#125;
+    
+        nav a &#123;
+        margin-bottom: 10px;
+        &#125;
+    
+        /* Archives 主內容 */
+        main &#123;
+        padding: 10px;
+        &#125;
+    &#125;
+    
+    @media (max-width: 480px) &#123;
+        .home-intro h2 &#123;
+        font-size: 1.2em;
+        &#125;
+    
+        header &#123;
+        padding: 15px;
+        &#125;
+    
+        .header-content &#123;
+        flex-direction: column;
+        align-items: center;
+        &#125;
+    
+        nav &#123;
+        align-items: center;
+        &#125;
+    
+        button &#123;
+        padding: 8px 16px;
+        font-size: 0.9em;
+        &#125;
+    
+        /* Archives 主內容 */
+        main &#123;
+        padding: 5px;
+        &#125;
+    &#125;
+</code></pre>
+<p>Q:<br>@media 放在.css最下面 代表當 寬度小於480px時 他就會把header 從原本的大小 條誠新的大小嗎 覆蓋原本的?<br>A:<br>是的，您理解得完全正確。@media 查詢在 CSS 文件中的位置確實會影響它的應用，但其實 @media 查詢的作用是根據條件（如屏幕寬度）覆蓋或添加樣式。</p>
+<h3 id="如何工作"><a href="#如何工作" class="headerlink" title="如何工作"></a>如何工作</h3><ol>
+<li><p><strong>基本樣式</strong>：在 CSS 文件中，首先定義的樣式是對所有設備和屏幕尺寸的基礎樣式。 </p>
+</li>
+<li><p><strong>媒體查詢</strong>：<code>@media</code> 查詢用於在特定條件下（如屏幕寬度小於 480px）覆蓋或添加樣式。這些樣式會在滿足條件時應用並覆蓋基礎樣式。</p>
+<pre><code> 這是範例唷~~
+ /* 基礎樣式 */
+ header &#123;
+ background: linear-gradient(135deg, #81d4fa, #4fc3f7);
+ padding: 20px;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ &#125;
+
+ /* 響應式設計 */
+ @media (max-width: 768px) &#123;
+ header &#123;
+     flex-direction: column;
+     padding: 15px;
+ &#125;
+ &#125;
+
+ @media (max-width: 480px) &#123;
+ header &#123;
+     padding: 10px;
+ &#125;
+ &#125;
 </code></pre>
 </li>
+</ol>
+<h3 id="解釋："><a href="#解釋：" class="headerlink" title="解釋："></a>解釋：</h3><ul>
+<li><strong>基礎樣式</strong>：所有設備和屏幕尺寸都會首先應用這些樣式。<code>header</code> 元素會有線性漸變背景、20px 的內邊距，並以橫向排列方式顯示內容。 </li>
+<li><strong>媒體查詢</strong>： * 當屏幕寬度小於等於 768px 時，<code>header</code> 的顯示方式會變成縱向排列（<code>flex-direction: column</code>），內邊距變為 15px。</li>
+<li>當屏幕寬度小於等於 768px 時，<code>header</code> 的顯示方式會變成縱向排列（<code>flex-direction: column</code>），內邊距變為 15px。 * 當屏幕寬度小於等於 480px 時，<code>header</code> 的內邊距進一步減少為 10px。</li>
 </ul>
-<h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><ul>
-<li>layout檔案的命名參考下面這個repo基本不會錯<br><a target="_blank" rel="noopener" href="https://github.com/henryhuang/hexo-theme-aloha/tree/master/layout">https://github.com/henryhuang/hexo-theme-aloha/tree/master/layout</a></li>
-</ul>
+<h3 id="覆蓋和添加"><a href="#覆蓋和添加" class="headerlink" title="覆蓋和添加"></a>覆蓋和添加</h3><p>當屏幕寬度小於 768px 時，第一個媒體查詢會將 <code>header</code> 的排列方式從橫向改為縱向，並修改內邊距為 15px。當屏幕寬度進一步縮小到 480px 以下時，第二個媒體查詢會進一步調整內邊距為 10px。這樣，第二個媒體查詢中的樣式會在第一個媒體查詢的樣式基礎上進行覆蓋。</p>
+<h3 id="載入順序"><a href="#載入順序" class="headerlink" title="載入順序"></a>載入順序</h3><p>CSS 的載入順序確保了後面定義的樣式會覆蓋前面的樣式。媒體查詢本身不會影響 CSS 文件的順序，只是根據條件選擇性地應用樣式。無論媒體查詢放在 CSS 文件的哪個位置，只要它們符合條件，它們就會生效並覆蓋之前的樣式。 這種層疊和覆蓋的機制使得響應式設計變得靈活且易於管理。</p>
 
 
       <script>

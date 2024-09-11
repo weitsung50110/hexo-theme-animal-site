@@ -64,9 +64,17 @@
 
 </header>
 
+  
   <div id="container">
+    <div id="search-modal" class="search-modal">
+  <div class="search-modal-content">
+    <h3>搜尋結果</h3>
+    <span id="search-close" class="search-close">&times;</span>
     <div id="search-results"></div>
-
+  </div>
+</div>
+    
+  
     <article class="post">
   <h1>hexo-theme-animal的Github所有相關repositories</h1>
   <!-- <p class="post-date">日期：Tue Sep 10 2024 03:49:40 GMT+0000</p> -->
@@ -188,6 +196,16 @@ hexo-site@0.0.0 /app/blog20240904
                   });
               });
           });
+
+          document.addEventListener('DOMContentLoaded', function() {
+            const tables = document.querySelectorAll('article table');
+            tables.forEach(table => {
+              const container = document.createElement('div');
+              container.className = 'table-container';
+              table.parentNode.insertBefore(container, table);
+              container.appendChild(table);
+            });
+          });
       </script>
   </div>
 </article>
@@ -206,7 +224,7 @@ hexo-site@0.0.0 /app/blog20240904
   </div>
 </div>
 
-<button id="open-btn">❤️</button>
+<button id="open-btn">🤗</button>
   <!-- 彈跳視窗容器 -->
 <div class="modal" id="modal">
   <div class="modal-content">

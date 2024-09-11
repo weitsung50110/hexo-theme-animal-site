@@ -35,7 +35,7 @@
         <li><a href="https://weitsung50110.github.io/hexo-theme-animal-site/">首頁</a></li>
         <li><a href="https://weitsung50110.github.io/hexo-theme-animal-site/about">關於</a></li>
         <li><a href="https://weitsung50110.github.io/hexo-theme-animal-site/archives">檔案</a></li>
-        <li><a id="toggleButton2">標籤&類別</a></li>
+        <li><a id="tag_toggleButton">標籤&類別</a></li>
         <li class="dropdown">
           <a class="menu-button">跟隨我</a>
           <div class="nav-menu">
@@ -62,14 +62,12 @@
     ☰
   </button>
 
-  
-
-  <button id="toggleButton">標籤&<br/>類別</button>
 </header>
 
   <div id="container">
     <div id="search-results"></div>
-    <div id="tags">
+
+    <div id="tags" >
     <h1></h1>
     
     
@@ -110,10 +108,22 @@
         
       </ul>
     
-  </div>
+  </div> 
     
   </div>
   
+  <!-- 側邊欄 -->
+<div id="sidebar">
+  <button id="close-btn">&times;</button>
+  <div class="author-info">
+    <img src="https://weitsung50110.github.io/hexo-theme-animal-site/images/2.png" alt="作者照片" class="author_photo">
+    <h2>Weiberson Chang</h2>
+    <p>我目前是AI軟體工程師</p>
+    <span>GitHub: weitsung50110</span>
+  </div>
+</div>
+
+<button id="open-btn">❤️</button>
   <!-- 彈跳視窗容器 -->
 <div class="modal" id="modal">
   <div class="modal-content">
@@ -165,13 +175,15 @@
     </div>
   </div>
 </div>
+
   <footer>
   <p>&copy; 2024 Weiberson Chang (weitsung50110). All rights reserved.</p>
   <!-- <script src="/js/main.js"></script> -->
   <!-- <script src="/hexo-theme-animal-site/js/script.js"></script> -->
   <script src="/hexo-theme-animal-site/js/script.js"></script>
-  <script src="/hexo-theme-animal-site/js/side_bar_script.js"></script>
+  <script src="/hexo-theme-animal-site/js/popup_tag.js"></script>
   <script src="/hexo-theme-animal-site/js/search.js"></script>
+  <script src="/hexo-theme-animal-site/js/sidebar.js"></script>
   
 </footer>
 

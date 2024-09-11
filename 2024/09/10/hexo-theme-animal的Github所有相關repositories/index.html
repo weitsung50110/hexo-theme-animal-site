@@ -35,7 +35,7 @@
         <li><a href="https://weitsung50110.github.io/hexo-theme-animal-site/">首頁</a></li>
         <li><a href="https://weitsung50110.github.io/hexo-theme-animal-site/about">關於</a></li>
         <li><a href="https://weitsung50110.github.io/hexo-theme-animal-site/archives">檔案</a></li>
-        <li><a id="toggleButton2">標籤&類別</a></li>
+        <li><a id="tag_toggleButton">標籤&類別</a></li>
         <li class="dropdown">
           <a class="menu-button">跟隨我</a>
           <div class="nav-menu">
@@ -62,13 +62,11 @@
     ☰
   </button>
 
-  
-
-  <button id="toggleButton">標籤&<br/>類別</button>
 </header>
 
   <div id="container">
     <div id="search-results"></div>
+
     <article class="post">
   <h1>hexo-theme-animal的Github所有相關repositories</h1>
   <!-- <p class="post-date">日期：Tue Sep 10 2024 03:49:40 GMT+0000</p> -->
@@ -78,7 +76,7 @@
     <div class="post-meta">
       
         <div class="post-tags">
-          <span>Tags:</span>
+          <span>標籤:</span>
           <ul>
             
               <li><a href="https://weitsung50110.github.io/hexo-theme-animal-site/tags/GitHub/">GitHub</a></li>
@@ -93,7 +91,7 @@
 
       
         <div class="post-categories">
-          <span>Categories:</span>
+          <span>類別:</span>
           <ul>
             
               <li><a href="https://weitsung50110.github.io/hexo-theme-animal-site/categories/GitHub/">GitHub</a></li>
@@ -111,6 +109,62 @@
 <h2 id="3-hexo-theme-animal-repo"><a href="#3-hexo-theme-animal-repo" class="headerlink" title="3. hexo-theme-animal_repo"></a>3. <a target="_blank" rel="noopener" href="https://github.com/weitsung50110/hexo-theme-animal_repo">hexo-theme-animal_repo</a></h2><p>這是關於 <code>hexo-theme-animal</code> 主題的補充 repository，包含了一些額外的資料和示例。詳細內容可以參見 <a target="_blank" rel="noopener" href="https://github.com/weitsung50110/hexo-theme-animal_repo">這裡</a>。</p>
 <hr>
 <p>希望這篇文章能夠幫助你了解這些相關的 GitHub repositories。</p>
+<h2 id="安裝的插件版本"><a href="#安裝的插件版本" class="headerlink" title="安裝的插件版本"></a>安裝的插件版本</h2><h3 id="Node-js-版本，我裡面是安裝20-16-0版本"><a href="#Node-js-版本，我裡面是安裝20-16-0版本" class="headerlink" title="Node.js 版本，我裡面是安裝20.16.0版本"></a>Node.js 版本，我裡面是安裝20.16.0版本</h3><table>
+<thead>
+<tr>
+<th>REPOSITORY</th>
+<th>TAG</th>
+<th>IMAGE ID</th>
+<th>CREATED</th>
+<th>SIZE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>node</td>
+<td>20.16.0</td>
+<td>1a8e51cfa7a5</td>
+<td>6 weeks ago</td>
+<td>1.1GB</td>
+</tr>
+</tbody></table>
+<h3 id="npm-依賴項，npm裡面還有安裝這些依賴"><a href="#npm-依賴項，npm裡面還有安裝這些依賴" class="headerlink" title="npm 依賴項，npm裡面還有安裝這些依賴"></a>npm 依賴項，npm裡面還有安裝這些依賴</h3><p>以下是 <code>npm list --depth=0</code> 輸出的依賴項列表：</p>
+<pre><code>root@73fbc4a3b07a:/app/blog20240904# npm list --depth=0
+hexo-site@0.0.0 /app/blog20240904
++-- hexo-generator-archive@2.0.0
++-- hexo-generator-category@2.0.0
++-- hexo-generator-index@4.0.0
++-- hexo-generator-searchdb@1.4.1
++-- hexo-generator-tag@2.0.0
++-- hexo-renderer-ejs@2.0.0
++-- hexo-renderer-marked@6.3.0
++-- hexo-renderer-stylus@3.0.1
++-- hexo-server@3.0.0
++-- hexo-theme-landscape@1.0.0
++-- hexo@7.3.0
+`-- moment-timezone@0.5.45
+</code></pre>
+<ul>
+<li><p><strong>Hexo 及相關插件</strong></p>
+<ul>
+<li><code>hexo</code> @7.3.0</li>
+<li><code>hexo-generator-archive</code> @2.0.0</li>
+<li><code>hexo-generator-category</code> @2.0.0</li>
+<li><code>hexo-generator-index</code> @4.0.0</li>
+<li><code>hexo-generator-searchdb</code> @1.4.1</li>
+<li><code>hexo-generator-tag</code> @2.0.0</li>
+<li><code>hexo-renderer-ejs</code> @2.0.0</li>
+<li><code>hexo-renderer-marked</code> @6.3.0</li>
+<li><code>hexo-renderer-stylus</code> @3.0.1</li>
+<li><code>hexo-server</code> @3.0.0</li>
+<li><code>hexo-theme-landscape</code> @1.0.0</li>
+</ul>
+</li>
+<li><p><strong>Moment.js 及其時區支持</strong></p>
+<ul>
+<li><code>moment-timezone</code> @0.5.45</li>
+</ul>
+</li>
+</ul>
 
 
       <script>
@@ -137,10 +191,22 @@
       </script>
   </div>
 </article>
-
+ 
     
   </div>
   
+  <!-- 側邊欄 -->
+<div id="sidebar">
+  <button id="close-btn">&times;</button>
+  <div class="author-info">
+    <img src="https://weitsung50110.github.io/hexo-theme-animal-site/images/2.png" alt="作者照片" class="author_photo">
+    <h2>Weiberson Chang</h2>
+    <p>我目前是AI軟體工程師</p>
+    <span>GitHub: weitsung50110</span>
+  </div>
+</div>
+
+<button id="open-btn">❤️</button>
   <!-- 彈跳視窗容器 -->
 <div class="modal" id="modal">
   <div class="modal-content">
@@ -192,13 +258,15 @@
     </div>
   </div>
 </div>
+
   <footer>
   <p>&copy; 2024 Weiberson Chang (weitsung50110). All rights reserved.</p>
   <!-- <script src="/js/main.js"></script> -->
   <!-- <script src="/hexo-theme-animal-site/js/script.js"></script> -->
   <script src="/hexo-theme-animal-site/js/script.js"></script>
-  <script src="/hexo-theme-animal-site/js/side_bar_script.js"></script>
+  <script src="/hexo-theme-animal-site/js/popup_tag.js"></script>
   <script src="/hexo-theme-animal-site/js/search.js"></script>
+  <script src="/hexo-theme-animal-site/js/sidebar.js"></script>
   
 </footer>
 

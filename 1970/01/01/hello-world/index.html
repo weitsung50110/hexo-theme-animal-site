@@ -110,7 +110,10 @@
           <p>This is default Hello World</p>
       </div>
   
-  <div class="content">
+
+  <!-- 目錄容器 -->
+  <div class="article-container">
+    <div class="article-content">
       <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -125,40 +128,46 @@
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
+    </div>
+    <div id="toc" class="toc">
+      <ul></ul>
+    </div>
+  </div>
+  
+  <button id="toc-toggle" class="toc-toggle-btn">目錄</button>
 
-      <script>
-          document.addEventListener('DOMContentLoaded', function() {
-              const codeBlocks = document.querySelectorAll('pre code');
-              codeBlocks.forEach(block => {
-                  const button = document.createElement('button');
-                  button.textContent = 'Copy';
-                  button.className = 'copy-button';
-                  block.parentElement.style.position = 'relative';
-                  block.parentElement.appendChild(button);
-      
-                  button.addEventListener('click', () => {
-                      const range = document.createRange();
-                      range.selectNode(block);
-                      window.getSelection().removeAllRanges();
-                      window.getSelection().addRange(range);
-                      document.execCommand('copy');
-                      window.getSelection().removeAllRanges();
-                      // alert('Code copied to clipboard!');
-                  });
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const codeBlocks = document.querySelectorAll('pre code');
+          codeBlocks.forEach(block => {
+              const button = document.createElement('button');
+              button.textContent = 'Copy';
+              button.className = 'copy-button';
+              block.parentElement.style.position = 'relative';
+              block.parentElement.appendChild(button);
+
+              button.addEventListener('click', () => {
+                  const range = document.createRange();
+                  range.selectNode(block);
+                  window.getSelection().removeAllRanges();
+                  window.getSelection().addRange(range);
+                  document.execCommand('copy');
+                  window.getSelection().removeAllRanges();
+                  // alert('Code copied to clipboard!');
               });
           });
+      });
 
-          document.addEventListener('DOMContentLoaded', function() {
-            const tables = document.querySelectorAll('article table');
-            tables.forEach(table => {
-              const container = document.createElement('div');
-              container.className = 'table-container';
-              table.parentNode.insertBefore(container, table);
-              container.appendChild(table);
-            });
-          });
-      </script>
-  </div>
+      document.addEventListener('DOMContentLoaded', function() {
+        const tables = document.querySelectorAll('article table');
+        tables.forEach(table => {
+          const container = document.createElement('div');
+          container.className = 'table-container';
+          table.parentNode.insertBefore(container, table);
+          container.appendChild(table);
+        });
+      });
+  </script>
 </article>
  
     
@@ -168,7 +177,7 @@
 <div id="sidebar">
   <button id="close-btn">&times;</button>
   <div class="author-info">
-    <img src="https://weitsung50110.github.io/hexo-theme-animal-site/images/2.png" alt="作者照片" class="author_photo">
+    <img src="https://weitsung50110.github.io/hexo-theme-animal-site/images/0.png" alt="作者照片" class="author_photo">
     <h2>Weiberson Chang</h2>
     <p>我目前是AI軟體工程師</p>
     <span>GitHub: weitsung50110</span>
@@ -236,6 +245,7 @@
   <script src="/hexo-theme-animal-site/js/popup_tag.js"></script>
   <script src="/hexo-theme-animal-site/js/search.js"></script>
   <script src="/hexo-theme-animal-site/js/sidebar.js"></script>
+  <script src="/hexo-theme-animal-site/js/toc.js"></script>
   
 </footer>
 

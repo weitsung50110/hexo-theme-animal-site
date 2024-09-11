@@ -76,14 +76,17 @@
     
   
     <article class="post">
-  <h1>about</h1>
-  <!-- <p class="post-date">日期：Thu Aug 08 2024 06:12:49 GMT+0000</p> -->
-  <p class="post-date">日期：2024-08-08 14:12:49</p>
+  <h1>About</h1>
+  <!-- <p class="post-date">日期：Wed Aug 07 2024 22:12:49 GMT+0000</p> -->
+  <p class="post-date">日期：2024-08-08 06:12:49</p>
   <p class="post-author">作者：Weiberson</p>
   
   
-  <div class="content">
-      <p><strong>自我介紹</strong><br><img src="/hexo-theme-animal-site/assets/images/0.png"><br>您好，我是Weiberson Chang，資訊科學碩士，目前擔任AI軟體工程師。</p>
+
+  <!-- 目錄容器 -->
+  <div class="article-container">
+    <div class="article-content">
+      <p><strong>自我介紹</strong><br><img src="/assets/images/0.png"><br>您好，我是Weiberson Chang，資訊科學碩士，目前擔任AI軟體工程師。</p>
 <p>我專注於計算機視覺（CV）、大型語言模型（LLM）、深度學習以及機器學習，擁有實務經驗和技術專長。</p>
 <p>我對解決複雜問題充滿熱情，並具備創新思維和優秀的團隊合作精神。我注重細節，喜歡挑戰新技術，並且在高壓環境下能夠保持高效能。</p>
 <p>了解更多關於我的資訊，請參考以下連結：</p>
@@ -92,40 +95,46 @@
 <li>Medium: <a target="_blank" rel="noopener" href="https://medium.com/@weiberson">weiberson</a></li>
 </ul>
 
+    </div>
+    <div id="toc" class="toc">
+      <ul></ul>
+    </div>
+  </div>
+  
+  <button id="toc-toggle" class="toc-toggle-btn">目錄</button>
 
-      <script>
-          document.addEventListener('DOMContentLoaded', function() {
-              const codeBlocks = document.querySelectorAll('pre code');
-              codeBlocks.forEach(block => {
-                  const button = document.createElement('button');
-                  button.textContent = 'Copy';
-                  button.className = 'copy-button';
-                  block.parentElement.style.position = 'relative';
-                  block.parentElement.appendChild(button);
-      
-                  button.addEventListener('click', () => {
-                      const range = document.createRange();
-                      range.selectNode(block);
-                      window.getSelection().removeAllRanges();
-                      window.getSelection().addRange(range);
-                      document.execCommand('copy');
-                      window.getSelection().removeAllRanges();
-                      // alert('Code copied to clipboard!');
-                  });
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const codeBlocks = document.querySelectorAll('pre code');
+          codeBlocks.forEach(block => {
+              const button = document.createElement('button');
+              button.textContent = 'Copy';
+              button.className = 'copy-button';
+              block.parentElement.style.position = 'relative';
+              block.parentElement.appendChild(button);
+
+              button.addEventListener('click', () => {
+                  const range = document.createRange();
+                  range.selectNode(block);
+                  window.getSelection().removeAllRanges();
+                  window.getSelection().addRange(range);
+                  document.execCommand('copy');
+                  window.getSelection().removeAllRanges();
+                  // alert('Code copied to clipboard!');
               });
           });
+      });
 
-          document.addEventListener('DOMContentLoaded', function() {
-            const tables = document.querySelectorAll('article table');
-            tables.forEach(table => {
-              const container = document.createElement('div');
-              container.className = 'table-container';
-              table.parentNode.insertBefore(container, table);
-              container.appendChild(table);
-            });
-          });
-      </script>
-  </div>
+      document.addEventListener('DOMContentLoaded', function() {
+        const tables = document.querySelectorAll('article table');
+        tables.forEach(table => {
+          const container = document.createElement('div');
+          container.className = 'table-container';
+          table.parentNode.insertBefore(container, table);
+          container.appendChild(table);
+        });
+      });
+  </script>
 </article>
  
     
@@ -135,7 +144,7 @@
 <div id="sidebar">
   <button id="close-btn">&times;</button>
   <div class="author-info">
-    <img src="https://weitsung50110.github.io/hexo-theme-animal-site/images/2.png" alt="作者照片" class="author_photo">
+    <img src="https://weitsung50110.github.io/hexo-theme-animal-site/images/0.png" alt="作者照片" class="author_photo">
     <h2>Weiberson Chang</h2>
     <p>我目前是AI軟體工程師</p>
     <span>GitHub: weitsung50110</span>
@@ -203,6 +212,7 @@
   <script src="/hexo-theme-animal-site/js/popup_tag.js"></script>
   <script src="/hexo-theme-animal-site/js/search.js"></script>
   <script src="/hexo-theme-animal-site/js/sidebar.js"></script>
+  <script src="/hexo-theme-animal-site/js/toc.js"></script>
   
 </footer>
 

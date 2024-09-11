@@ -110,11 +110,14 @@
     </div>
   
   
-  <div class="content">
-      <p>在這篇文章中，我將介紹三個 GitHub 上的相關 repositories，它們都是關於 Hexo 主題的開發和使用。</p>
-<h2 id="1-hexo-theme-animal"><a href="#1-hexo-theme-animal" class="headerlink" title="1. hexo-theme-animal"></a>1. <a target="_blank" rel="noopener" href="https://github.com/weitsung50110/hexo-theme-animal">hexo-theme-animal</a></h2><p>這是我開發的一個 Hexo 主題，名為 <code>hexo-theme-animal</code>。這個主題提供了多種自定義選項和現代化的設計，適合用於個人博客或作品集。你可以在 <a target="_blank" rel="noopener" href="https://github.com/weitsung50110/hexo-theme-animal">這裡</a> 查看詳細信息和使用說明。</p>
-<h2 id="2-hexo-theme-animal-site"><a href="#2-hexo-theme-animal-site" class="headerlink" title="2. hexo-theme-animal-site"></a>2. <a target="_blank" rel="noopener" href="https://github.com/weitsung50110/hexo-theme-animal-site">hexo-theme-animal-site</a></h2><p>這個 repository 包含了使用 <code>hexo-theme-animal</code> 主題的示例網站。你可以參考 <a target="_blank" rel="noopener" href="https://github.com/weitsung50110/hexo-theme-animal-site">這個連結</a> 來查看完整的網站實例和部署過程。</p>
-<h2 id="3-hexo-theme-animal-repo"><a href="#3-hexo-theme-animal-repo" class="headerlink" title="3. hexo-theme-animal_repo"></a>3. <a target="_blank" rel="noopener" href="https://github.com/weitsung50110/hexo-theme-animal_repo">hexo-theme-animal_repo</a></h2><p>這是關於 <code>hexo-theme-animal</code> 主題的補充 repository，包含了一些額外的資料和示例。詳細內容可以參見 <a target="_blank" rel="noopener" href="https://github.com/weitsung50110/hexo-theme-animal_repo">這裡</a>。</p>
+
+  <!-- 目錄容器 -->
+  <div class="article-container">
+    <div class="article-content">
+      <h2 id="GitHub-上的相關-repositories"><a href="#GitHub-上的相關-repositories" class="headerlink" title="GitHub 上的相關 repositories"></a>GitHub 上的相關 repositories</h2><p>在這篇文章中，我將介紹三個 GitHub 上的相關 repositories，它們都是關於 Hexo 主題的開發和使用。</p>
+<h3 id="1-hexo-theme-animal"><a href="#1-hexo-theme-animal" class="headerlink" title="1. hexo-theme-animal"></a>1. <a target="_blank" rel="noopener" href="https://github.com/weitsung50110/hexo-theme-animal">hexo-theme-animal</a></h3><p>這是我開發的一個 Hexo 主題，名為 <code>hexo-theme-animal</code>。這個主題提供了多種自定義選項和現代化的設計，適合用於個人博客或作品集。你可以在 <a target="_blank" rel="noopener" href="https://github.com/weitsung50110/hexo-theme-animal">這裡</a> 查看詳細信息和使用說明。</p>
+<h3 id="2-hexo-theme-animal-site"><a href="#2-hexo-theme-animal-site" class="headerlink" title="2. hexo-theme-animal-site"></a>2. <a target="_blank" rel="noopener" href="https://github.com/weitsung50110/hexo-theme-animal-site">hexo-theme-animal-site</a></h3><p>這個 repository 包含了使用 <code>hexo-theme-animal</code> 主題的示例網站。你可以參考 <a target="_blank" rel="noopener" href="https://github.com/weitsung50110/hexo-theme-animal-site">這個連結</a> 來查看完整的網站實例和部署過程。</p>
+<h3 id="3-hexo-theme-animal-repo"><a href="#3-hexo-theme-animal-repo" class="headerlink" title="3. hexo-theme-animal_repo"></a>3. <a target="_blank" rel="noopener" href="https://github.com/weitsung50110/hexo-theme-animal_repo">hexo-theme-animal_repo</a></h3><p>這是關於 <code>hexo-theme-animal</code> 主題的補充 repository，包含了一些額外的資料和示例。詳細內容可以參見 <a target="_blank" rel="noopener" href="https://github.com/weitsung50110/hexo-theme-animal_repo">這裡</a>。</p>
 <hr>
 <p>希望這篇文章能夠幫助你了解這些相關的 GitHub repositories。</p>
 <h2 id="安裝的插件版本"><a href="#安裝的插件版本" class="headerlink" title="安裝的插件版本"></a>安裝的插件版本</h2><h3 id="Node-js-版本，我裡面是安裝20-16-0版本"><a href="#Node-js-版本，我裡面是安裝20-16-0版本" class="headerlink" title="Node.js 版本，我裡面是安裝20.16.0版本"></a>Node.js 版本，我裡面是安裝20.16.0版本</h3><table>
@@ -174,40 +177,46 @@ hexo-site@0.0.0 /app/blog20240904
 </li>
 </ul>
 
+    </div>
+    <div id="toc" class="toc">
+      <ul></ul>
+    </div>
+  </div>
+  
+  <button id="toc-toggle" class="toc-toggle-btn">目錄</button>
 
-      <script>
-          document.addEventListener('DOMContentLoaded', function() {
-              const codeBlocks = document.querySelectorAll('pre code');
-              codeBlocks.forEach(block => {
-                  const button = document.createElement('button');
-                  button.textContent = 'Copy';
-                  button.className = 'copy-button';
-                  block.parentElement.style.position = 'relative';
-                  block.parentElement.appendChild(button);
-      
-                  button.addEventListener('click', () => {
-                      const range = document.createRange();
-                      range.selectNode(block);
-                      window.getSelection().removeAllRanges();
-                      window.getSelection().addRange(range);
-                      document.execCommand('copy');
-                      window.getSelection().removeAllRanges();
-                      // alert('Code copied to clipboard!');
-                  });
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const codeBlocks = document.querySelectorAll('pre code');
+          codeBlocks.forEach(block => {
+              const button = document.createElement('button');
+              button.textContent = 'Copy';
+              button.className = 'copy-button';
+              block.parentElement.style.position = 'relative';
+              block.parentElement.appendChild(button);
+
+              button.addEventListener('click', () => {
+                  const range = document.createRange();
+                  range.selectNode(block);
+                  window.getSelection().removeAllRanges();
+                  window.getSelection().addRange(range);
+                  document.execCommand('copy');
+                  window.getSelection().removeAllRanges();
+                  // alert('Code copied to clipboard!');
               });
           });
+      });
 
-          document.addEventListener('DOMContentLoaded', function() {
-            const tables = document.querySelectorAll('article table');
-            tables.forEach(table => {
-              const container = document.createElement('div');
-              container.className = 'table-container';
-              table.parentNode.insertBefore(container, table);
-              container.appendChild(table);
-            });
-          });
-      </script>
-  </div>
+      document.addEventListener('DOMContentLoaded', function() {
+        const tables = document.querySelectorAll('article table');
+        tables.forEach(table => {
+          const container = document.createElement('div');
+          container.className = 'table-container';
+          table.parentNode.insertBefore(container, table);
+          container.appendChild(table);
+        });
+      });
+  </script>
 </article>
  
     
@@ -217,7 +226,7 @@ hexo-site@0.0.0 /app/blog20240904
 <div id="sidebar">
   <button id="close-btn">&times;</button>
   <div class="author-info">
-    <img src="https://weitsung50110.github.io/hexo-theme-animal-site/images/2.png" alt="作者照片" class="author_photo">
+    <img src="https://weitsung50110.github.io/hexo-theme-animal-site/images/0.png" alt="作者照片" class="author_photo">
     <h2>Weiberson Chang</h2>
     <p>我目前是AI軟體工程師</p>
     <span>GitHub: weitsung50110</span>
@@ -285,6 +294,7 @@ hexo-site@0.0.0 /app/blog20240904
   <script src="/hexo-theme-animal-site/js/popup_tag.js"></script>
   <script src="/hexo-theme-animal-site/js/search.js"></script>
   <script src="/hexo-theme-animal-site/js/sidebar.js"></script>
+  <script src="/hexo-theme-animal-site/js/toc.js"></script>
   
 </footer>
 

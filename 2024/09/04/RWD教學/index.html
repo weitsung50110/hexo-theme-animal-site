@@ -103,7 +103,10 @@
           <p>如何把很多.css結合在一起，並且可以達到RWD模式。</p>
       </div>
   
-  <div class="content">
+
+  <!-- 目錄容器 -->
+  <div class="article-container">
+    <div class="article-content">
       <p>Q:<br>我現在有6個.css檔案 依照不同.ejs進行分類<br>我現在想要做成RWD響應式網站 請問怎麼辦?<br>A:</p>
 <h3 id="1-合併所有-CSS-文件"><a href="#1-合併所有-CSS-文件" class="headerlink" title="1. 合併所有 CSS 文件"></a>1. 合併所有 CSS 文件</h3><p>首先，將所有 CSS 文件的內容合併到一個主 CSS 文件中，例如 <code>main.css</code>。這樣可以集中管理樣式，並在一個地方進行響應式設計的調整。</p>
 <pre><code>    /* main.css */
@@ -212,40 +215,46 @@
 <h3 id="覆蓋和添加"><a href="#覆蓋和添加" class="headerlink" title="覆蓋和添加"></a>覆蓋和添加</h3><p>當屏幕寬度小於 768px 時，第一個媒體查詢會將 <code>header</code> 的排列方式從橫向改為縱向，並修改內邊距為 15px。當屏幕寬度進一步縮小到 480px 以下時，第二個媒體查詢會進一步調整內邊距為 10px。這樣，第二個媒體查詢中的樣式會在第一個媒體查詢的樣式基礎上進行覆蓋。</p>
 <h3 id="載入順序"><a href="#載入順序" class="headerlink" title="載入順序"></a>載入順序</h3><p>CSS 的載入順序確保了後面定義的樣式會覆蓋前面的樣式。媒體查詢本身不會影響 CSS 文件的順序，只是根據條件選擇性地應用樣式。無論媒體查詢放在 CSS 文件的哪個位置，只要它們符合條件，它們就會生效並覆蓋之前的樣式。 這種層疊和覆蓋的機制使得響應式設計變得靈活且易於管理。</p>
 
+    </div>
+    <div id="toc" class="toc">
+      <ul></ul>
+    </div>
+  </div>
+  
+  <button id="toc-toggle" class="toc-toggle-btn">目錄</button>
 
-      <script>
-          document.addEventListener('DOMContentLoaded', function() {
-              const codeBlocks = document.querySelectorAll('pre code');
-              codeBlocks.forEach(block => {
-                  const button = document.createElement('button');
-                  button.textContent = 'Copy';
-                  button.className = 'copy-button';
-                  block.parentElement.style.position = 'relative';
-                  block.parentElement.appendChild(button);
-      
-                  button.addEventListener('click', () => {
-                      const range = document.createRange();
-                      range.selectNode(block);
-                      window.getSelection().removeAllRanges();
-                      window.getSelection().addRange(range);
-                      document.execCommand('copy');
-                      window.getSelection().removeAllRanges();
-                      // alert('Code copied to clipboard!');
-                  });
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const codeBlocks = document.querySelectorAll('pre code');
+          codeBlocks.forEach(block => {
+              const button = document.createElement('button');
+              button.textContent = 'Copy';
+              button.className = 'copy-button';
+              block.parentElement.style.position = 'relative';
+              block.parentElement.appendChild(button);
+
+              button.addEventListener('click', () => {
+                  const range = document.createRange();
+                  range.selectNode(block);
+                  window.getSelection().removeAllRanges();
+                  window.getSelection().addRange(range);
+                  document.execCommand('copy');
+                  window.getSelection().removeAllRanges();
+                  // alert('Code copied to clipboard!');
               });
           });
+      });
 
-          document.addEventListener('DOMContentLoaded', function() {
-            const tables = document.querySelectorAll('article table');
-            tables.forEach(table => {
-              const container = document.createElement('div');
-              container.className = 'table-container';
-              table.parentNode.insertBefore(container, table);
-              container.appendChild(table);
-            });
-          });
-      </script>
-  </div>
+      document.addEventListener('DOMContentLoaded', function() {
+        const tables = document.querySelectorAll('article table');
+        tables.forEach(table => {
+          const container = document.createElement('div');
+          container.className = 'table-container';
+          table.parentNode.insertBefore(container, table);
+          container.appendChild(table);
+        });
+      });
+  </script>
 </article>
  
     
@@ -255,7 +264,7 @@
 <div id="sidebar">
   <button id="close-btn">&times;</button>
   <div class="author-info">
-    <img src="https://weitsung50110.github.io/hexo-theme-animal-site/images/2.png" alt="作者照片" class="author_photo">
+    <img src="https://weitsung50110.github.io/hexo-theme-animal-site/images/0.png" alt="作者照片" class="author_photo">
     <h2>Weiberson Chang</h2>
     <p>我目前是AI軟體工程師</p>
     <span>GitHub: weitsung50110</span>
@@ -323,6 +332,7 @@
   <script src="/hexo-theme-animal-site/js/popup_tag.js"></script>
   <script src="/hexo-theme-animal-site/js/search.js"></script>
   <script src="/hexo-theme-animal-site/js/sidebar.js"></script>
+  <script src="/hexo-theme-animal-site/js/toc.js"></script>
   
 </footer>
 

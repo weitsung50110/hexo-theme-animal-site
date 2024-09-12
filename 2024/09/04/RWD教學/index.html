@@ -224,36 +224,7 @@
   <button id="toc-toggle-btn" class="toc-toggle-btn">目錄</button>
 
   <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          const codeBlocks = document.querySelectorAll('pre code');
-          codeBlocks.forEach(block => {
-              const button = document.createElement('button');
-              button.textContent = 'Copy';
-              button.className = 'copy-button';
-              block.parentElement.style.position = 'relative';
-              block.parentElement.appendChild(button);
-
-              button.addEventListener('click', () => {
-                  const range = document.createRange();
-                  range.selectNode(block);
-                  window.getSelection().removeAllRanges();
-                  window.getSelection().addRange(range);
-                  document.execCommand('copy');
-                  window.getSelection().removeAllRanges();
-                  // alert('Code copied to clipboard!');
-              });
-          });
-      });
-
-      document.addEventListener('DOMContentLoaded', function() {
-        const tables = document.querySelectorAll('article table');
-        tables.forEach(table => {
-          const container = document.createElement('div');
-          container.className = 'table-container';
-          table.parentNode.insertBefore(container, table);
-          container.appendChild(table);
-        });
-      });
+      
   </script>
 </article>
  
@@ -268,6 +239,7 @@
     <h2>Weiberson Chang</h2>
     <p>我目前是AI軟體工程師</p>
     <span>GitHub: weitsung50110</span>
+    <a href="https://weitsung50110.github.io/hexo-theme-animal-site/about">About me</a>
   </div>
 </div>
 
@@ -333,8 +305,11 @@
   <script src="/hexo-theme-animal-site/js/search.js"></script>
   <script src="/hexo-theme-animal-site/js/sidebar.js"></script>
   <script src="/hexo-theme-animal-site/js/toc.js"></script>
+  <script src="/hexo-theme-animal-site/js/post.js"></script>  
   
 </footer>
 
 </body>
 </html>
+<!-- 返回頂部按鈕 -->
+<button id="scroll-to-top-btn" class="scroll-to-top-btn">▲</button>

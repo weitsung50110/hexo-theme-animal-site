@@ -75,26 +75,91 @@
 </div>
     
   
-    <div id="category">
-    <h1></h1>
-    
-    
-      <ul class="post-list">
-        
-          <li>
+    <article class="post">
+  <h1>關於archives的設定</h1>
+  <!-- <p class="post-date">日期：Thu Aug 08 2024 23:22:11 GMT+0000</p> -->
+  <p class="post-date">日期：2024-08-09 07:22:11</p>
+  <p class="post-author">作者：Weiberson</p>
+  
+    <div class="post-meta">
+      
+        <div class="post-tags">
+          <span>標籤:</span>
+          <ul>
             
-              <a href="/hexo-theme-animal-site/2024/09/10/hexo-theme-animal%E7%9A%84Github%E6%89%80%E6%9C%89%E7%9B%B8%E9%97%9Crepositories/">
-                hexo-theme-animal的Github所有相關repositories
-              </a>
+              <li><a href="https://weitsung50110.github.io/hexo-theme-animal-site/tags/%E6%95%99%E5%AD%B8/">教學</a></li>
             
-            <time datetime="2024-09-10T03:49:40.000Z">
-              2024-09-10
-            </time>
-          </li>
-        
-      </ul>
-    
-  </div> 
+              <li><a href="https://weitsung50110.github.io/hexo-theme-animal-site/tags/%E4%B8%BB%E9%A1%8C/">主題</a></li>
+            
+          </ul>
+        </div>
+      
+
+      
+        <div class="post-categories">
+          <span>類別:</span>
+          <ul>
+            
+              <li><a href="https://weitsung50110.github.io/hexo-theme-animal-site/categories/%E4%B8%BB%E9%A1%8C/">主題</a></li>
+            
+          </ul>
+        </div>
+      
+    </div>
+  
+  
+      <div class="excerpt">
+          <p>有bug的時候可以看看，因為我記憶力不好:&#34;)</p>
+      </div>
+  
+
+  <!-- 目錄容器 -->
+  <div class="article-container">
+    <div class="article-content">
+      <h3 id="錯誤"><a href="#錯誤" class="headerlink" title="錯誤"></a>錯誤</h3><p>這邊很妙 當title設為archives的時候</p>
+<p>儘管layout設定archives，但總會連到index.ejs上面</p>
+<p>應該是&#x2F;archives路徑已經預設被指到index.ejs了</p>
+<p>所以歸檔的部分，我決定換名字 改為archives_N</p>
+<h3 id="正確"><a href="#正確" class="headerlink" title="正確"></a>正確</h3><p>命名的時候輸入archive.ejs會自動導入archive.ejs裡面</p>
+<p>如果title設為archives.ejs的時候，當然會沒有反應</p>
+<p>導致變成連到index.ejs上面</p>
+<h3 id="tag-ejs"><a href="#tag-ejs" class="headerlink" title="tag.ejs"></a>tag.ejs</h3><p>tag.ejs才抓的到<br>如果打tags.ejs會抓不到</p>
+<h3 id="當本地-css看的到改變-上傳到github-page卻看不到改變"><a href="#當本地-css看的到改變-上傳到github-page卻看不到改變" class="headerlink" title="當本地.css看的到改變 上傳到github page卻看不到改變?!"></a>當本地.css看的到改變 上傳到github page卻看不到改變?!</h3><p>進去&#x2F;public裡面的.css查看 更改的語法是否還在<br>當<code>huxo g -d</code>後 有些css語法會自己消失&gt;&lt;”</p>
+<h3 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h3><p><strong><code>url_for</code> 函數的用途</strong>： </p>
+<ul>
+<li>用於生成靜態資源的 URL（如 CSS、JavaScript、圖片等）。 </li>
+<li>用於生成網站文章和頁面的 URL。 </li>
+<li>url_for 會生成相對於網站根目錄的 URL。例如，url_for(‘css&#x2F;style.css’) 會生成 &#x2F;css&#x2F;style.css。這樣的 URL 可以直接用於靜態資源，如 CSS、JavaScript 和圖片。</li>
+</ul>
+<p><strong>如何使用</strong>： </p>
+<ul>
+<li><p>在模板中使用 <code>&lt;%- url_for(&#39;path&#39;) %&gt;</code> 來生成正確的 URL</p>
+<pre><code>  &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;%- url_for(&#39;css/style.css&#39;) %&gt;&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;%- url_for(&#39;css/style_post.css&#39;) %&gt;&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;%- url_for(&#39;css/style_header.css&#39;) %&gt;&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;%- url_for(&#39;css/style_sidebar.css&#39;) %&gt;&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;%- url_for(&#39;css/style_archives.css&#39;) %&gt;&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;%- url_for(&#39;css/style_index_post.css&#39;) %&gt;&quot;&gt;
+</code></pre>
+</li>
+</ul>
+<h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><ul>
+<li>layout檔案的命名參考下面這個repo基本不會錯<br><a target="_blank" rel="noopener" href="https://github.com/henryhuang/hexo-theme-aloha/tree/master/layout">https://github.com/henryhuang/hexo-theme-aloha/tree/master/layout</a></li>
+</ul>
+
+    </div>
+    <div id="toc" class="toc">
+      <ul></ul>
+    </div>
+  </div>
+  
+  <button id="toc-toggle-btn" class="toc-toggle-btn">目錄</button>
+
+  <script>
+      
+  </script>
+</article>
+ 
     
   </div>
   
@@ -133,7 +198,7 @@
             
               <a href="https://weitsung50110.github.io/hexo-theme-animal-site/categories/%E9%A1%9E%E5%88%A5Hello/" class="category-item">類別Hello</a>
             
-              <a href="https://weitsung50110.github.io/hexo-theme-animal-site/categories/GitHub/" class="category-item">GitHub</a>
+              <a href="https://weitsung50110.github.io/hexo-theme-animal-site/categories/%E4%B8%BB%E9%A1%8C/" class="category-item">主題</a>
             
           </div>
         </div>
@@ -155,6 +220,8 @@
               <a href="https://weitsung50110.github.io/hexo-theme-animal-site/tags/Hexo/" class="tag-item">Hexo</a>
             
               <a href="https://weitsung50110.github.io/hexo-theme-animal-site/tags/%E4%B8%BB%E9%A1%8C/" class="tag-item">主題</a>
+            
+              <a href="https://weitsung50110.github.io/hexo-theme-animal-site/tags/RWD/" class="tag-item">RWD</a>
             
           </div>
         </div>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weiberson Chang Template</title>
+<!-- <link rel="stylesheet" href="/css/style.css"> -->
+<!-- <link rel="stylesheet" href="/hexo-theme-animal-site/css/style.css">
+<link rel="stylesheet" href="/hexo-theme-animal-site/css/style_post.css">
+<link rel="stylesheet" href="/hexo-theme-animal-site/css/style_header.css">
+<link rel="stylesheet" href="/hexo-theme-animal-site/css/style_sidebar.css">
+<link rel="stylesheet" href="/hexo-theme-animal-site/css/style_archives.css">
+<link rel="stylesheet" href="/hexo-theme-animal-site/css/style_index_post.css"> -->
+
+<!-- <link rel="stylesheet" href="/hexo-theme-animal-site/css/style.css">
+<link rel="stylesheet" href="/hexo-theme-animal-site/css/style_post.css">
+<link rel="stylesheet" href="/hexo-theme-animal-site/css/style_header.css">
+<link rel="stylesheet" href="/hexo-theme-animal-site/css/style_sidebar.css">
+<link rel="stylesheet" href="/hexo-theme-animal-site/css/style_archives.css">
+<link rel="stylesheet" href="/hexo-theme-animal-site/css/style_index_post.css"> -->
+<link rel="stylesheet" href="/hexo-theme-animal-site/css/main.css">
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+  
+
+  <header>
+  <div class="header-content">
+    <img src="https://weitsung50110.github.io/hexo-theme-animal-site/images/2.png" alt="Logo" class="logo">
+    <h1><a href="https://weitsung50110.github.io/hexo-theme-animal-site">Weiberson Chang Template</a></h1>
+    <img src="https://weitsung50110.github.io/hexo-theme-animal-site/images/0.gif" alt="Logo2" class="logo2">
+
+    <!-- 在 nav 中包裹選單 -->
+    <nav class="mobile-nav">
+      <ul class="nav-top">
+        <li><a href="https://weitsung50110.github.io/hexo-theme-animal-site/">首頁</a></li>
+        <li><a href="https://weitsung50110.github.io/hexo-theme-animal-site/about">關於</a></li>
+        <li><a href="https://weitsung50110.github.io/hexo-theme-animal-site/archives">檔案</a></li>
+        <li><a id="tag_toggleButton">標籤&類別</a></li>
+        <li class="dropdown">
+          <a class="menu-button">跟隨我</a>
+          <div class="nav-menu">
+            <a target="_blank" rel="noopener" href="https://github.com/weitsung50110">GitHub</a>
+            <a target="_blank" rel="noopener" href="https://medium.com/@weiberson">Medium</a>
+          </div>
+        </li>
+      </ul>
+      <!-- 搜尋框 -->
+      <ul class="nav-bottom">
+        <li>
+          <div id="search-container">
+            <input type="text" id="search-input" placeholder="搜尋文章..." />
+            <button id="search-button">搜尋</button>
+            
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- 在 header 中添加漢堡選單 -->
+  <button class="menu-toggle" aria-label="Toggle Navigation">
+    ☰
+  </button>
+
+</header>
+
+  
+  <div id="container">
+    <div id="search-modal" class="search-modal">
+  <div class="search-modal-content">
+    <h3>搜尋結果</h3>
+    <span id="search-close" class="search-close">&times;</span>
+    <div id="search-results"></div>
+  </div>
+</div>
+    
+  
+    <article class="post">
+  <h1>GitHub fork實作和介紹：如何將你的 Hexo 修改提交PR到官方 hexojs/site 儲存庫</h1>
+  <!-- <p class="post-date">日期：Mon Sep 09 2024 02:02:23 GMT+0000</p> -->
+  <p class="post-date">日期：2024-09-09 10:02:23</p>
+  <p class="post-author">作者：Weiberson</p>
+  
+    <div class="post-meta">
+      
+        <div class="post-tags">
+          <span>標籤:</span>
+          <ul>
+            
+              <li><a href="https://weitsung50110.github.io/hexo-theme-animal-site/tags/%E6%95%99%E5%AD%B8/">教學</a></li>
+            
+              <li><a href="https://weitsung50110.github.io/hexo-theme-animal-site/tags/GitHub/">GitHub</a></li>
+            
+              <li><a href="https://weitsung50110.github.io/hexo-theme-animal-site/tags/%E9%96%8B%E6%BA%90/">開源</a></li>
+            
+          </ul>
+        </div>
+      
+
+      
+        <div class="post-categories">
+          <span>類別:</span>
+          <ul>
+            
+              <li><a href="https://weitsung50110.github.io/hexo-theme-animal-site/categories/%E6%95%99%E5%AD%B8/">教學</a></li>
+            
+          </ul>
+        </div>
+      
+    </div>
+  
+  
+      <div class="excerpt">
+          <p>本文將逐步教你如何將修改提交到 Hexo 官方的 hexojs/site，從 fork 儲存庫到發送 Pull Request，幫助你更好地參與開源社區。</p>
+      </div>
+  
+
+  <!-- 目錄容器 -->
+  <div class="article-container">
+    <div class="article-content">
+      <p>這篇文章將逐步教你如何將修改提交到 Hexo 官方的 <code>hexojs/site</code>，從 fork 儲存庫到發送 Pull Request，幫助你更好地參與開源社區，並讓更多人受益於你的工作。</p>
+<h2 id="GitHub-Fork-介紹"><a href="#GitHub-Fork-介紹" class="headerlink" title="GitHub Fork 介紹"></a>GitHub Fork 介紹</h2><p>在 GitHub 上，<code>fork</code> 是一個將他人的儲存庫複製到自己帳戶下的操作。這樣做的目的是讓你能在保留原始儲存庫內容的基礎上進行修改，而不影響原始作者的專案。<code>Fork</code> 讓你可以：</p>
+<ul>
+<li><strong>獨立進行修改</strong>：一旦你 fork 了儲存庫，你就有了這個專案的副本，可以自由進行修改或添加功能。</li>
+<li><strong>提交 Pull Request</strong>：當你對 fork 出來的專案進行了修改，並希望將這些改動反饋到原始專案時，可以發送 Pull Request，由原作者審核後決定是否合併你的更改。</li>
+<li><strong>貢獻開源專案</strong>：Fork 是開源專案貢獻者的一個重要工具，允許你從別人的專案基礎上創建自己的功能，並向原始專案提交改進。</li>
+</ul>
+<h2 id="Fork-的常見用途"><a href="#Fork-的常見用途" class="headerlink" title="Fork 的常見用途"></a>Fork 的常見用途</h2><ul>
+<li><strong>參與開源項目</strong>：開發者可以 fork 一個開源專案，添加新功能或修復 bug，然後通過 Pull Request 提交回原始專案。</li>
+<li><strong>自定義專案</strong>：你可以 fork 一個公開的儲存庫，並根據自己的需求修改或擴展它，無需擔心影響原始專案。</li>
+<li><strong>實驗性修改</strong>：fork 後，你可以進行實驗性修改，而不用擔心損壞原始專案。</li>
+</ul>
+<p>簡單來說，fork 是一種複製 GitHub 儲存庫到自己帳戶並進行獨立修改的功能，特別適合於開源協作和個人項目的定制開發。</p>
+<h2 id="GitHub-Fork-實作"><a href="#GitHub-Fork-實作" class="headerlink" title="GitHub Fork 實作"></a>GitHub Fork 實作</h2><p>會想寫這篇是因為我之前做的 Hexo 模板有做一些更新，我是使用 EJS 內嵌式的樣板引擎來進行實作，有開源在我的 GitHub。 因此我需要把我的變動 merge 進去 Hexo 的官方 site 裡面，因此想順便記錄起來，給大家參考。</p>
+<ul>
+<li><strong>GitHub - weitsung50110&#x2F;hexo-theme-animal</strong>: an animal theme. Contribute to weitsung50110&#x2F;hexo-theme-animal development by creating an account on GitHub. <a target="_blank" rel="noopener" href="https://github.com/weitsung50110/hexo-theme-animal">github.com</a></li>
+</ul>
+<p>這個 Hexo Theme Animal 模板我有用 GitHub Page 做成部落格網站，有興趣的話歡迎查看: <a href="https://weitsung50110.github.io/hexo-theme-animal-site/">https://weitsung50110.github.io/hexo-theme-animal-site/</a></p>
+<h3 id="提交-Pull-Request"><a href="#提交-Pull-Request" class="headerlink" title="提交 Pull Request"></a>提交 Pull Request</h3><h3 id="1-點擊-Fork-按鈕"><a href="#1-點擊-Fork-按鈕" class="headerlink" title="1. 點擊 Fork 按鈕"></a>1. 點擊 Fork 按鈕</h3><p>在儲存庫的右上角，你會看到一個名為 <code>Fork</code> 的按鈕，點擊它。這會將這個儲存庫複製到你的 GitHub 帳號下。<br><img src="/hexo-theme-animal-site/assets/images/GitHub-fork%E5%AF%A6%E4%BD%9C%E5%92%8C%E4%BB%8B%E7%B4%B9%EF%BC%9A%E5%A6%82%E4%BD%95%E5%B0%87%E4%BD%A0%E7%9A%84-Hexo-%E4%BF%AE%E6%94%B9%E6%8F%90%E4%BA%A4PR%E5%88%B0%E5%AE%98%E6%96%B9-hexojs-site-%E5%84%B2%E5%AD%98%E5%BA%AB/0.png"><br><img src="/hexo-theme-animal-site/assets/images/GitHub-fork%E5%AF%A6%E4%BD%9C%E5%92%8C%E4%BB%8B%E7%B4%B9%EF%BC%9A%E5%A6%82%E4%BD%95%E5%B0%87%E4%BD%A0%E7%9A%84-Hexo-%E4%BF%AE%E6%94%B9%E6%8F%90%E4%BA%A4PR%E5%88%B0%E5%AE%98%E6%96%B9-hexojs-site-%E5%84%B2%E5%AD%98%E5%BA%AB/1.png"></p>
+<h3 id="2-Clone-到本地端"><a href="#2-Clone-到本地端" class="headerlink" title="2. Clone 到本地端"></a>2. Clone 到本地端</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/weitsung50110/site.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-建立新的分支"><a href="#3-建立新的分支" class="headerlink" title="3. 建立新的分支"></a>3. 建立新的分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b modify240909</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-提交變更"><a href="#4-提交變更" class="headerlink" title="4. 提交變更"></a>4. 提交變更</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch modify240909</span><br><span class="line">Changes not staged <span class="keyword">for</span> commit:</span><br><span class="line">  (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> to update what will be committed)</span><br><span class="line">  (use <span class="string">&quot;git restore &lt;file&gt;...&quot;</span> to discard changes <span class="keyword">in</span> working directory)</span><br><span class="line">        modified:   <span class="built_in">source</span>/_data/themes/Animal.yml</span><br><span class="line">        modified:   <span class="built_in">source</span>/themes/screenshots/Animal.png</span><br><span class="line"></span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -m <span class="string">&quot;modify github imgs and desc&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-推送變更到-GitHub"><a href="#5-推送變更到-GitHub" class="headerlink" title="5. 推送變更到 GitHub"></a>5. 推送變更到 GitHub</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push --set-upstream origin modify240909</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-提交-Pull-Request"><a href="#6-提交-Pull-Request" class="headerlink" title="6. 提交 Pull Request"></a>6. 提交 Pull Request</h3><p>GitHub 會建議你建立一個 Pull Request。點擊 <code>Compare &amp; pull request</code>，並填寫相關描述，然後提交你的 Pull Request。<br><img src="/hexo-theme-animal-site/assets/images/GitHub-fork%E5%AF%A6%E4%BD%9C%E5%92%8C%E4%BB%8B%E7%B4%B9%EF%BC%9A%E5%A6%82%E4%BD%95%E5%B0%87%E4%BD%A0%E7%9A%84-Hexo-%E4%BF%AE%E6%94%B9%E6%8F%90%E4%BA%A4PR%E5%88%B0%E5%AE%98%E6%96%B9-hexojs-site-%E5%84%B2%E5%AD%98%E5%BA%AB/2.png"><br>選擇要合併的 branch，我剛剛創的分支是 <code>modify240909</code>，所以把它併入 <code>site</code> 的 <code>master</code> 當中。<br><img src="/hexo-theme-animal-site/assets/images/GitHub-fork%E5%AF%A6%E4%BD%9C%E5%92%8C%E4%BB%8B%E7%B4%B9%EF%BC%9A%E5%A6%82%E4%BD%95%E5%B0%87%E4%BD%A0%E7%9A%84-Hexo-%E4%BF%AE%E6%94%B9%E6%8F%90%E4%BA%A4PR%E5%88%B0%E5%AE%98%E6%96%B9-hexojs-site-%E5%84%B2%E5%AD%98%E5%BA%AB/3.png"><br>通常比較大的開源項目當你提 PR 時，會要求你填寫一些資料。<br><img src="/hexo-theme-animal-site/assets/images/GitHub-fork%E5%AF%A6%E4%BD%9C%E5%92%8C%E4%BB%8B%E7%B4%B9%EF%BC%9A%E5%A6%82%E4%BD%95%E5%B0%87%E4%BD%A0%E7%9A%84-Hexo-%E4%BF%AE%E6%94%B9%E6%8F%90%E4%BA%A4PR%E5%88%B0%E5%AE%98%E6%96%B9-hexojs-site-%E5%84%B2%E5%AD%98%E5%BA%AB/4.png"></p>
+<h3 id="7-完成"><a href="#7-完成" class="headerlink" title="7. 完成"></a>7. 完成</h3><p>接下來等待審核！<br><img src="/hexo-theme-animal-site/assets/images/GitHub-fork%E5%AF%A6%E4%BD%9C%E5%92%8C%E4%BB%8B%E7%B4%B9%EF%BC%9A%E5%A6%82%E4%BD%95%E5%B0%87%E4%BD%A0%E7%9A%84-Hexo-%E4%BF%AE%E6%94%B9%E6%8F%90%E4%BA%A4PR%E5%88%B0%E5%AE%98%E6%96%B9-hexojs-site-%E5%84%B2%E5%AD%98%E5%BA%AB/5.png"><br>原作者就可以審核你的變更，並決定是否將你的代碼合併到原始儲存庫中。</p>
+<h3 id="8-審核完成"><a href="#8-審核完成" class="headerlink" title="8. 審核完成"></a>8. 審核完成</h3><p>可以看到我的 PR 有一個 <code>Open</code> 代表還在審核中，另外兩個 <code>Closed</code> 代表審核完成。<br><img src="/hexo-theme-animal-site/assets/images/GitHub-fork%E5%AF%A6%E4%BD%9C%E5%92%8C%E4%BB%8B%E7%B4%B9%EF%BC%9A%E5%A6%82%E4%BD%95%E5%B0%87%E4%BD%A0%E7%9A%84-Hexo-%E4%BF%AE%E6%94%B9%E6%8F%90%E4%BA%A4PR%E5%88%B0%E5%AE%98%E6%96%B9-hexojs-site-%E5%84%B2%E5%AD%98%E5%BA%AB/6.png"><br>因為我才剛提出 PR，這邊給大家看我以前提出並審核通過的 PR。</p>
+<p>審核完成後會把你的 PR 併入 <code>Master</code> 當中，會從 <code>Open</code> 調成 <code>Closed</code>。<br><img src="/hexo-theme-animal-site/assets/images/GitHub-fork%E5%AF%A6%E4%BD%9C%E5%92%8C%E4%BB%8B%E7%B4%B9%EF%BC%9A%E5%A6%82%E4%BD%95%E5%B0%87%E4%BD%A0%E7%9A%84-Hexo-%E4%BF%AE%E6%94%B9%E6%8F%90%E4%BA%A4PR%E5%88%B0%E5%AE%98%E6%96%B9-hexojs-site-%E5%84%B2%E5%AD%98%E5%BA%AB/7.png"><br>**更新 (2024-09-10)**：我的 PR 審核完成了<br><img src="/hexo-theme-animal-site/assets/images/GitHub-fork%E5%AF%A6%E4%BD%9C%E5%92%8C%E4%BB%8B%E7%B4%B9%EF%BC%9A%E5%A6%82%E4%BD%95%E5%B0%87%E4%BD%A0%E7%9A%84-Hexo-%E4%BF%AE%E6%94%B9%E6%8F%90%E4%BA%A4PR%E5%88%B0%E5%AE%98%E6%96%B9-hexojs-site-%E5%84%B2%E5%AD%98%E5%BA%AB/8.png"><br>我新提的 PR 也變成 <code>Closed</code> 的狀態了！<br><img src="/hexo-theme-animal-site/assets/images/GitHub-fork%E5%AF%A6%E4%BD%9C%E5%92%8C%E4%BB%8B%E7%B4%B9%EF%BC%9A%E5%A6%82%E4%BD%95%E5%B0%87%E4%BD%A0%E7%9A%84-Hexo-%E4%BF%AE%E6%94%B9%E6%8F%90%E4%BA%A4PR%E5%88%B0%E5%AE%98%E6%96%B9-hexojs-site-%E5%84%B2%E5%AD%98%E5%BA%AB/9.png"><br>By the way，你在 Hexo 官網可以找到我做的主題！<br><img src="/hexo-theme-animal-site/assets/images/GitHub-fork%E5%AF%A6%E4%BD%9C%E5%92%8C%E4%BB%8B%E7%B4%B9%EF%BC%9A%E5%A6%82%E4%BD%95%E5%B0%87%E4%BD%A0%E7%9A%84-Hexo-%E4%BF%AE%E6%94%B9%E6%8F%90%E4%BA%A4PR%E5%88%B0%E5%AE%98%E6%96%B9-hexojs-site-%E5%84%B2%E5%AD%98%E5%BA%AB/10.png"><br><img src="/hexo-theme-animal-site/assets/images/GitHub-fork%E5%AF%A6%E4%BD%9C%E5%92%8C%E4%BB%8B%E7%B4%B9%EF%BC%9A%E5%A6%82%E4%BD%95%E5%B0%87%E4%BD%A0%E7%9A%84-Hexo-%E4%BF%AE%E6%94%B9%E6%8F%90%E4%BA%A4PR%E5%88%B0%E5%AE%98%E6%96%B9-hexojs-site-%E5%84%B2%E5%AD%98%E5%BA%AB/11.png"></p>
+
+    </div>
+    <div id="toc" class="toc">
+      <ul></ul>
+    </div>
+  </div>
+  
+  <button id="toc-toggle-btn" class="toc-toggle-btn">目錄</button>
+
+  <script>
+      
+  </script>
+</article>
+ 
+    
+  </div>
+  
+  <!-- 側邊欄 -->
+<div id="sidebar">
+  <button id="close-btn">&times;</button>
+  <div class="author-info">
+    <img src="https://weitsung50110.github.io/hexo-theme-animal-site/images/0.png" alt="作者照片" class="author_photo">
+    <h2>Weiberson Chang</h2>
+    <p>我目前是AI軟體工程師</p>
+    <span>GitHub: weitsung50110</span>
+    <a href="https://weitsung50110.github.io/hexo-theme-animal-site/about">About me</a>
+  </div>
+</div>
+
+<button id="open-btn">🤗</button>
+  <!-- 彈跳視窗容器 -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close" id="closeButton">&times;</span>
+    <div class="modal-sections">
+      <div class="social-links-section">
+        <h3>跟隨我</h3>
+        <div class="social-links">
+          <a href="https://github.com/weitsung50110" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+          <a href="https://medium.com/@weiberson" target="_blank"><i class="fab fa-medium"></i>Medium</a>
+        </div>
+      </div>
+
+      
+        <div class="categories-section">
+          <h3>類別</h3>
+          <div class="categories-container">
+            
+              <a href="https://weitsung50110.github.io/hexo-theme-animal-site/categories/%E6%95%99%E5%AD%B8/" class="category-item">教學</a>
+            
+              <a href="https://weitsung50110.github.io/hexo-theme-animal-site/categories/Hexo%E4%B8%BB%E9%A1%8C/" class="category-item">Hexo主題</a>
+            
+          </div>
+        </div>
+      
+
+      
+        <div class="tags-section">
+          <h3>標籤</h3>
+          <div class="tags-container">
+            
+              <a href="https://weitsung50110.github.io/hexo-theme-animal-site/tags/%E6%95%99%E5%AD%B8/" class="tag-item">教學</a>
+            
+              <a href="https://weitsung50110.github.io/hexo-theme-animal-site/tags/GitHub/" class="tag-item">GitHub</a>
+            
+              <a href="https://weitsung50110.github.io/hexo-theme-animal-site/tags/RWD/" class="tag-item">RWD</a>
+            
+              <a href="https://weitsung50110.github.io/hexo-theme-animal-site/tags/%E9%96%8B%E6%BA%90/" class="tag-item">開源</a>
+            
+              <a href="https://weitsung50110.github.io/hexo-theme-animal-site/tags/Hexo%E4%B8%BB%E9%A1%8C/" class="tag-item">Hexo主題</a>
+            
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+  <footer>
+  <p>&copy; 2024 Weiberson Chang (weitsung50110). All rights reserved.</p>
+  <!-- <script src="/js/main.js"></script> -->
+  <!-- <script src="/hexo-theme-animal-site/js/script.js"></script> -->
+  <script src="/hexo-theme-animal-site/js/script.js"></script>
+  <script src="/hexo-theme-animal-site/js/popup_tag.js"></script>
+  <script src="/hexo-theme-animal-site/js/search.js"></script>
+  <script src="/hexo-theme-animal-site/js/sidebar.js"></script>
+  <script src="/hexo-theme-animal-site/js/toc.js"></script>
+  <script src="/hexo-theme-animal-site/js/post.js"></script>  
+  
+</footer>
+
+</body>
+</html>
+<!-- 返回頂部按鈕 -->
+<button id="scroll-to-top-btn" class="scroll-to-top-btn">▲</button>

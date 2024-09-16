@@ -184,18 +184,6 @@ ol {
   padding-left: 30px; /* 確保有相同的左邊距 */
 }
 
-/* 粗體文字 */
-strong, b {
-  font-weight: bold;
-  /* 可以選擇添加其他樣式 */
-}
-
-/* 斜體文字 */
-em, i {
-  font-style: italic;
-  /* 可以選擇添加其他樣式 */
-}
-
 /* 當表格超出容器寬度時顯示滾動條 */
 .table-container {
   overflow-x: auto;

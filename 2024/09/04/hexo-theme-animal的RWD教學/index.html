@@ -114,14 +114,17 @@
   
   
       <div class="excerpt">
-          <p>如何把很多.css結合在一起，並且可以達到RWD模式。</p>
+          <p>如何把很多.css結合在一起，解釋 @media 查詢的使用方式，並達到RWD模式。</p>
       </div>
   
 
   <!-- 目錄容器 -->
   <div class="article-container">
     <div class="article-content">
-      <h3 id="Q-我現在有-6-個-css-檔案，依照不同-ejs-進行分類。我現在想要做成-RWD-響應式網站，請問怎麼辦？"><a href="#Q-我現在有-6-個-css-檔案，依照不同-ejs-進行分類。我現在想要做成-RWD-響應式網站，請問怎麼辦？" class="headerlink" title="Q: 我現在有 6 個 .css 檔案，依照不同 .ejs 進行分類。我現在想要做成 RWD 響應式網站，請問怎麼辦？"></a>Q: 我現在有 6 個 .css 檔案，依照不同 .ejs 進行分類。我現在想要做成 RWD 響應式網站，請問怎麼辦？</h3><h3 id="A"><a href="#A" class="headerlink" title="A:"></a>A:</h3><h3 id="1-合併所有-CSS-文件"><a href="#1-合併所有-CSS-文件" class="headerlink" title="1. 合併所有 CSS 文件"></a>1. 合併所有 CSS 文件</h3><p>首先，將所有 CSS 文件的內容合併到一個主 CSS 文件中，例如 <code>main.css</code>。這樣可以集中管理樣式，並在一個地方進行響應式設計的調整。</p>
+      <blockquote>
+<p>介紹如何將多個 CSS 文件合併為一個主文件以實現響應式設計，並解釋 @media 查詢的使用方式，以及如何在不同屏幕寬度下覆蓋和調整樣式。</p>
+</blockquote>
+<h3 id="Q-我現在有-6-個-css-檔案，依照不同-ejs-進行分類。我現在想要做成-RWD-響應式網站，請問怎麼辦？"><a href="#Q-我現在有-6-個-css-檔案，依照不同-ejs-進行分類。我現在想要做成-RWD-響應式網站，請問怎麼辦？" class="headerlink" title="Q: 我現在有 6 個 .css 檔案，依照不同 .ejs 進行分類。我現在想要做成 RWD 響應式網站，請問怎麼辦？"></a>Q: 我現在有 6 個 .css 檔案，依照不同 .ejs 進行分類。我現在想要做成 RWD 響應式網站，請問怎麼辦？</h3><h3 id="A-1-合併所有-CSS-文件"><a href="#A-1-合併所有-CSS-文件" class="headerlink" title="A: 1. 合併所有 CSS 文件"></a>A: 1. 合併所有 CSS 文件</h3><p>首先，將所有 CSS 文件的內容合併到一個主 CSS 文件中，例如 <code>main.css</code>。這樣可以集中管理樣式，並在一個地方進行響應式設計的調整。</p>
 <pre><code>    /* main.css */
     /* 引入其他 CSS 文件 */
     @import url(&#39;style.css&#39;);
@@ -189,7 +192,7 @@
         &#125;
     &#125;
 </code></pre>
-<h3 id="Q-media-放在-css-最下面，代表當寬度小於-480px-時，它會把-header-從原本的大小改成新的大小嗎？會覆蓋原本的樣式嗎？"><a href="#Q-media-放在-css-最下面，代表當寬度小於-480px-時，它會把-header-從原本的大小改成新的大小嗎？會覆蓋原本的樣式嗎？" class="headerlink" title="Q: @media 放在 .css 最下面，代表當寬度小於 480px 時，它會把 header 從原本的大小改成新的大小嗎？會覆蓋原本的樣式嗎？"></a>Q: @media 放在 .css 最下面，代表當寬度小於 480px 時，它會把 header 從原本的大小改成新的大小嗎？會覆蓋原本的樣式嗎？</h3><h3 id="A-1"><a href="#A-1" class="headerlink" title="A:"></a>A:</h3><p>是的，您理解得完全正確。<code>@media</code> 查詢在 CSS 文件中的位置確實會影響它的應用，但 <code>@media</code> 查詢的作用是根據條件（如屏幕寬度）覆蓋或添加樣式。</p>
+<h3 id="Q-media-放在-css-最下面，代表當寬度小於-480px-時，它會把-header-從原本的大小改成新的大小嗎？會覆蓋原本的樣式嗎？"><a href="#Q-media-放在-css-最下面，代表當寬度小於-480px-時，它會把-header-從原本的大小改成新的大小嗎？會覆蓋原本的樣式嗎？" class="headerlink" title="Q: @media 放在 .css 最下面，代表當寬度小於 480px 時，它會把 header 從原本的大小改成新的大小嗎？會覆蓋原本的樣式嗎？"></a>Q: @media 放在 .css 最下面，代表當寬度小於 480px 時，它會把 header 從原本的大小改成新的大小嗎？會覆蓋原本的樣式嗎？</h3><h3 id="A-是的。"><a href="#A-是的。" class="headerlink" title="A: 是的。"></a>A: 是的。</h3><p><code>@media</code> 查詢在 CSS 文件中的位置確實會影響它的應用，但 <code>@media</code> 查詢的作用是根據條件（如屏幕寬度）覆蓋或添加樣式。</p>
 <h3 id="如何工作"><a href="#如何工作" class="headerlink" title="如何工作"></a>如何工作</h3><ol>
 <li><p><strong>基本樣式</strong>：在 CSS 文件中，首先定義的樣式是對所有設備和屏幕尺寸的基礎樣式。 </p>
 </li>

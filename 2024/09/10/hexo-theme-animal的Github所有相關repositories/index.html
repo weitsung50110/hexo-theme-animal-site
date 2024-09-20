@@ -119,7 +119,10 @@
   <!-- 目錄容器 -->
   <div class="article-container">
     <div class="article-content">
-      <h2 id="GitHub-上的相關-repositories"><a href="#GitHub-上的相關-repositories" class="headerlink" title="GitHub 上的相關 repositories"></a>GitHub 上的相關 repositories</h2><p>在這篇文章中，我將介紹三個 GitHub 上的相關 repositories，它們都是關於 Hexo 主題的開發和使用。</p>
+      <blockquote>
+<p>介紹我用 Hexo 開發的 GitHub repositories，包括自定義的 hexo-theme-animal 主題和示例網站，並詳細列出安裝的 Node.js 版本和相關的 npm 依賴項，幫助讀者快速了解主題和插件的安裝配置。</p>
+</blockquote>
+<h2 id="GitHub-上的相關-repositories"><a href="#GitHub-上的相關-repositories" class="headerlink" title="GitHub 上的相關 repositories"></a>GitHub 上的相關 repositories</h2><p>在這篇文章中，我將介紹 GitHub 上我做的 repositories，它們都是關於 Hexo 主題的開發和使用。</p>
 <h3 id="1-hexo-theme-animal"><a href="#1-hexo-theme-animal" class="headerlink" title="1. hexo-theme-animal"></a>1. <a target="_blank" rel="noopener" href="https://github.com/weitsung50110/hexo-theme-animal">hexo-theme-animal</a></h3><p>這是我開發的一個 Hexo 主題，名為 <code>hexo-theme-animal</code>。這個主題提供了多種自定義選項和現代化的設計，適合用於個人博客或作品集。你可以在 <a target="_blank" rel="noopener" href="https://github.com/weitsung50110/hexo-theme-animal">這裡</a> 查看詳細信息和使用說明。</p>
 <h3 id="2-hexo-theme-animal-site"><a href="#2-hexo-theme-animal-site" class="headerlink" title="2. hexo-theme-animal-site"></a>2. <a href="https://weitsung50110.github.io/hexo-theme-animal-site/">hexo-theme-animal-site</a></h3><p>這個 repository 包含了使用 <code>hexo-theme-animal</code> 主題的示例網站。你可以參考 <a href="https://weitsung50110.github.io/2024/08/08/hexo-theme-animal%E9%97%9C%E6%96%BC.ejs%E7%9A%84%E8%A8%AD%E5%AE%9A%EF%BC%8C%E5%8C%85%E6%8B%ACarchives,tag...%E7%AD%89%E7%AD%89/">這個連結</a> 來查看完整的網站實例和部署過程。</p>
 <hr>
@@ -143,21 +146,7 @@
 </tr>
 </tbody></table>
 <h3 id="npm-依賴項，npm裡面還有安裝這些依賴"><a href="#npm-依賴項，npm裡面還有安裝這些依賴" class="headerlink" title="npm 依賴項，npm裡面還有安裝這些依賴"></a>npm 依賴項，npm裡面還有安裝這些依賴</h3><p>以下是 <code>npm list --depth=0</code> 輸出的依賴項列表：</p>
-<pre><code>root@73fbc4a3b07a:/app/blog20240904# npm list --depth=0
-hexo-site@0.0.0 /app/blog20240904
-+-- hexo-generator-archive@2.0.0
-+-- hexo-generator-category@2.0.0
-+-- hexo-generator-index@4.0.0
-+-- hexo-generator-searchdb@1.4.1
-+-- hexo-generator-tag@2.0.0
-+-- hexo-renderer-ejs@2.0.0
-+-- hexo-renderer-marked@6.3.0
-+-- hexo-renderer-stylus@3.0.1
-+-- hexo-server@3.0.0
-+-- hexo-theme-landscape@1.0.0
-+-- hexo@7.3.0
-`-- moment-timezone@0.5.45
-</code></pre>
+<p>  root@73fbc4a3b07a:&#x2F;app&#x2F;my-blog# npm list –depth&#x3D;0<br>  <a href="mailto:&#104;&#101;&#120;&#x6f;&#45;&#115;&#105;&#116;&#101;&#64;&#48;&#46;&#48;&#x2e;&#x30;">&#104;&#101;&#120;&#x6f;&#45;&#115;&#105;&#116;&#101;&#64;&#48;&#46;&#48;&#x2e;&#x30;</a> &#x2F;app&#x2F;my-blog<br>  +– <a href="mailto:&#104;&#x65;&#120;&#x6f;&#x2d;&#x67;&#x65;&#x6e;&#101;&#x72;&#97;&#x74;&#x6f;&#114;&#45;&#x61;&#114;&#x63;&#104;&#x69;&#118;&#x65;&#x40;&#50;&#46;&#48;&#x2e;&#x30;">&#104;&#x65;&#120;&#x6f;&#x2d;&#x67;&#x65;&#x6e;&#101;&#x72;&#97;&#x74;&#x6f;&#114;&#45;&#x61;&#114;&#x63;&#104;&#x69;&#118;&#x65;&#x40;&#50;&#46;&#48;&#x2e;&#x30;</a><br>  +– <a href="mailto:&#x68;&#x65;&#120;&#x6f;&#45;&#x67;&#101;&#x6e;&#x65;&#x72;&#97;&#x74;&#111;&#x72;&#x2d;&#x63;&#x61;&#x74;&#x65;&#103;&#111;&#x72;&#121;&#x40;&#50;&#46;&#48;&#x2e;&#48;">&#x68;&#x65;&#120;&#x6f;&#45;&#x67;&#101;&#x6e;&#x65;&#x72;&#97;&#x74;&#111;&#x72;&#x2d;&#x63;&#x61;&#x74;&#x65;&#103;&#111;&#x72;&#121;&#x40;&#50;&#46;&#48;&#x2e;&#48;</a><br>  +– <a href="mailto:&#x68;&#x65;&#x78;&#x6f;&#45;&#103;&#x65;&#110;&#x65;&#114;&#97;&#x74;&#111;&#114;&#45;&#105;&#x6e;&#100;&#101;&#120;&#x40;&#x34;&#46;&#48;&#x2e;&#48;">&#x68;&#x65;&#x78;&#x6f;&#45;&#103;&#x65;&#110;&#x65;&#114;&#97;&#x74;&#111;&#114;&#45;&#105;&#x6e;&#100;&#101;&#120;&#x40;&#x34;&#46;&#48;&#x2e;&#48;</a><br>  +– <a href="mailto:&#104;&#x65;&#120;&#111;&#45;&#x67;&#101;&#x6e;&#x65;&#114;&#97;&#x74;&#111;&#x72;&#45;&#115;&#101;&#97;&#x72;&#x63;&#x68;&#100;&#98;&#64;&#x31;&#46;&#x34;&#x2e;&#x31;">&#104;&#x65;&#120;&#111;&#45;&#x67;&#101;&#x6e;&#x65;&#114;&#97;&#x74;&#111;&#x72;&#45;&#115;&#101;&#97;&#x72;&#x63;&#x68;&#100;&#98;&#64;&#x31;&#46;&#x34;&#x2e;&#x31;</a><br>  +– <a href="mailto:&#104;&#x65;&#120;&#111;&#45;&#103;&#x65;&#x6e;&#x65;&#114;&#97;&#116;&#x6f;&#x72;&#x2d;&#115;&#x69;&#x74;&#101;&#109;&#97;&#x70;&#x40;&#51;&#46;&#48;&#46;&#x31;">&#104;&#x65;&#120;&#111;&#45;&#103;&#x65;&#x6e;&#x65;&#114;&#97;&#116;&#x6f;&#x72;&#x2d;&#115;&#x69;&#x74;&#101;&#109;&#97;&#x70;&#x40;&#51;&#46;&#48;&#46;&#x31;</a><br>  +– <a href="mailto:&#104;&#101;&#x78;&#111;&#45;&#x67;&#101;&#110;&#x65;&#114;&#97;&#116;&#x6f;&#x72;&#x2d;&#116;&#97;&#x67;&#64;&#50;&#x2e;&#48;&#46;&#48;">&#104;&#101;&#x78;&#111;&#45;&#x67;&#101;&#110;&#x65;&#114;&#97;&#116;&#x6f;&#x72;&#x2d;&#116;&#97;&#x67;&#64;&#50;&#x2e;&#48;&#46;&#48;</a><br>  +– <a href="mailto:&#x68;&#x65;&#x78;&#x6f;&#x2d;&#x72;&#101;&#110;&#x64;&#101;&#x72;&#x65;&#x72;&#45;&#x65;&#106;&#x73;&#64;&#x32;&#x2e;&#x30;&#x2e;&#48;">&#x68;&#x65;&#x78;&#x6f;&#x2d;&#x72;&#101;&#110;&#x64;&#101;&#x72;&#x65;&#x72;&#45;&#x65;&#106;&#x73;&#64;&#x32;&#x2e;&#x30;&#x2e;&#48;</a><br>  +– <a href="mailto:&#x68;&#x65;&#x78;&#x6f;&#45;&#x72;&#x65;&#110;&#100;&#101;&#x72;&#x65;&#114;&#x2d;&#x6d;&#97;&#114;&#107;&#101;&#100;&#x40;&#54;&#x2e;&#51;&#46;&#48;">&#x68;&#x65;&#x78;&#x6f;&#45;&#x72;&#x65;&#110;&#100;&#101;&#x72;&#x65;&#114;&#x2d;&#x6d;&#97;&#114;&#107;&#101;&#100;&#x40;&#54;&#x2e;&#51;&#46;&#48;</a><br>  +– <a href="mailto:&#104;&#x65;&#x78;&#111;&#45;&#x72;&#x65;&#x6e;&#100;&#101;&#114;&#101;&#114;&#45;&#x73;&#116;&#121;&#x6c;&#x75;&#115;&#64;&#51;&#x2e;&#x30;&#x2e;&#49;">&#104;&#x65;&#x78;&#111;&#45;&#x72;&#x65;&#x6e;&#100;&#101;&#114;&#101;&#114;&#45;&#x73;&#116;&#121;&#x6c;&#x75;&#115;&#64;&#51;&#x2e;&#x30;&#x2e;&#49;</a><br>  +– <a href="mailto:&#x68;&#101;&#120;&#x6f;&#x2d;&#x73;&#101;&#114;&#x76;&#x65;&#x72;&#64;&#51;&#46;&#x30;&#46;&#x30;">&#x68;&#101;&#120;&#x6f;&#x2d;&#x73;&#101;&#114;&#x76;&#x65;&#x72;&#64;&#51;&#46;&#x30;&#46;&#x30;</a><br>  +– <a href="mailto:&#104;&#x65;&#120;&#x6f;&#x2d;&#116;&#x68;&#x65;&#109;&#101;&#x2d;&#x6c;&#x61;&#110;&#x64;&#115;&#99;&#97;&#x70;&#x65;&#x40;&#49;&#x2e;&#x30;&#46;&#48;">&#104;&#x65;&#120;&#x6f;&#x2d;&#116;&#x68;&#x65;&#109;&#101;&#x2d;&#x6c;&#x61;&#110;&#x64;&#115;&#99;&#97;&#x70;&#x65;&#x40;&#49;&#x2e;&#x30;&#46;&#48;</a><br>  &#96;– <a href="mailto:&#x68;&#101;&#120;&#111;&#64;&#55;&#46;&#x33;&#46;&#48;">&#x68;&#101;&#120;&#111;&#64;&#55;&#46;&#x33;&#46;&#48;</a></p>
 <ul>
 <li><p><strong>Hexo 及相關插件</strong></p>
 <ul>
@@ -166,6 +155,7 @@ hexo-site@0.0.0 /app/blog20240904
 <li><code>hexo-generator-category</code> @2.0.0</li>
 <li><code>hexo-generator-index</code> @4.0.0</li>
 <li><code>hexo-generator-searchdb</code> @1.4.1</li>
+<li><code>hexo-generator-sitemap</code> @3.0.1”</li>
 <li><code>hexo-generator-tag</code> @2.0.0</li>
 <li><code>hexo-renderer-ejs</code> @2.0.0</li>
 <li><code>hexo-renderer-marked</code> @6.3.0</li>
@@ -180,6 +170,47 @@ hexo-site@0.0.0 /app/blog20240904
 </ul>
 </li>
 </ul>
+<h2 id="推薦需要npm安裝的套件"><a href="#推薦需要npm安裝的套件" class="headerlink" title="推薦需要npm安裝的套件"></a>推薦需要npm安裝的套件</h2><ul>
+<li>npm install hexo-generator-sitemap –save</li>
+<li>npm install moment-timezone –save</li>
+<li>npm install hexo-generator-searchdb –save</li>
+</ul>
+<h3 id="SEO-提供-Sitemap"><a href="#SEO-提供-Sitemap" class="headerlink" title="SEO - 提供 Sitemap"></a>SEO - 提供 Sitemap</h3><p>使用 Hexo 的內建功能生成 Sitemap，這樣搜尋引擎更容易找到你的頁面：</p>
+<p>  npm install hexo-generator-sitemap –save</p>
+<p>註冊並提交你的網站至 Google Search Console，這樣可以跟蹤你的網站表現，並獲得搜尋引擎的回饋。</p>
+<h3 id="文章的時區設定"><a href="#文章的時區設定" class="headerlink" title="文章的時區設定"></a>文章的時區設定</h3><p>希望在 Hexo 的模板中顯示正確的日期時間格式，並且希望顯示特定的時區（例如台北時間）</p>
+<p>1 確保你已經安裝了 moment-timezone</p>
+<p>  npm install moment-timezone –save</p>
+<p>2 修改 EJS 模板的post.ejs</p>
+<pre><code>&lt;article class=&quot;post&quot;&gt;
+&lt;h1&gt;&lt;%= page.title %&gt;&lt;/h1&gt;
+&lt;!-- &lt;p class=&quot;post-date&quot;&gt;&lt;%- __(&#39;post.date&#39;) %&gt;&lt;%= page.date %&gt;&lt;/p&gt; --&gt;
+&lt;p class=&quot;post-date&quot;&gt;&lt;%- __(&#39;post.date&#39;) %&gt;&lt;%= moment(page.date).tz(&#39;Asia/Taipei&#39;).format(&#39;YYYY-MM-DD HH:mm:ss&#39;) %&gt;&lt;/p&gt;
+</code></pre>
+<p>如果你要更改成其他的時區，更改tz(‘Asia&#x2F;Taipei’)就好了~</p>
+<h3 id="加入文章搜尋功能-Search-function"><a href="#加入文章搜尋功能-Search-function" class="headerlink" title="加入文章搜尋功能 Search function"></a>加入文章搜尋功能 Search function</h3><p>需要安裝 hexo-generator-searchdb 插件，這個插件可以生成一個 .json 檔案作為搜尋資料庫</p>
+<pre><code>npm install hexo-generator-searchdb --save
+</code></pre>
+<p>打開你的 Hexo 根目錄下的 _config.yml，加入以下配置來啟用 JSON 格式的搜尋資料：</p>
+<pre><code>search:
+  path: search.json
+  field: post
+  content: true
+</code></pre>
+<p>path: search.json 指定生成 .json 檔案。<br>field: post 指定只索引文章。如果你還想要索引頁面，將它改為 all。<br>content: true 指定是否包括文章的內容。若只需要標題和摘要，可將其設為 false。<br>在&#x2F;source&#x2F;js&#x2F;search.js中有一個，路徑記得要修改~ 因為我的專案名字是在hexo-theme-animal-site，所以需要加上&#x2F;hexo-theme-animal-site才能夠抓到。<br>hexo-theme-animal-site是我自己設定的專案名字，你需要根據你創建的專案名字來進行更改。</p>
+<pre><code>// 設置 JSON 文件的路徑
+const searchDataUrl = &#39;/hexo-theme-animal-site/search.json&#39;;
+</code></pre>
+<p>若沒有改的話會出現以下錯誤</p>
+<pre><code>GET https://weitsung50110.github.io/search.json 404 (Not Found)
+(anonymous) @ search.js:9
+search.js:54 搜尋資料載入錯誤: Error: 網絡錯誤，無法加載 search.json
+    at search.js:12:13
+(anonymous) @ search.js:54
+Promise.catch
+(anonymous) @ search.js:54
+</code></pre>
+<p>因為預設會從<a target="_blank" rel="noopener" href="https://weitsung50110.github.io抓取search.json,但我是在repo中架網站,所以路徑會變成https//weitsung50110.github.io/hexo-theme-animal-site/search.json%E3%80%82">https://weitsung50110.github.io抓取search.json，但我是在repo中架網站，所以路徑會變成https://weitsung50110.github.io/hexo-theme-animal-site/search.json。</a> 可以自己輸入<a href="https://weitsung50110.github.io/hexo-theme-animal-site/search.json%E4%B9%8B%E9%A1%9E%E7%9A%84%E7%B6%B2%E5%9D%80%E5%8E%BB%E7%9C%8B%E7%9C%8B%E6%9C%83%E4%B8%8D%E6%9C%83%E5%87%BA%E7%8F%BE.json%E6%AA%94%E6%A1%88">https://weitsung50110.github.io/hexo-theme-animal-site/search.json之類的網址去看看會不會出現.json檔案</a>!!</p>
 
     </div>
     <div id="toc" class="toc">
